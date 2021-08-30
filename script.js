@@ -1,7 +1,5 @@
-let map = L.map("map", {
-  layer: MQ.mapLayer();
-}).setView([-15, -55], 5);
-
+console.log("teste");
+var map = L.map("map").setView([-15, -55], 5);
 L.tileLayer(
   "https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=hKsUwUx2YBOu2Scruilx",
   {
@@ -13,3 +11,18 @@ L.tileLayer(
     crossOrigin: true,
   }
 ).addTo(map);
+
+var curitiba = L.latLng(-25.4284,-49.2733);
+var sp = L.latLng(-23.5489,-46.6388);
+var pointList = [curitiba, sp];
+
+let distancia = sp.distanceTo(curitiba);
+console.log(distancia);
+
+var firstpolyline = new L.Polyline(pointList, {
+  color: 'red',
+  weight: 3,
+  opacity: 0.5,
+  smoothFactor: 1
+});
+firstpolyline.addTo(map);
