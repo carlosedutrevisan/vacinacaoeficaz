@@ -3,6 +3,22 @@ body {
   color: black;
 }
 
+header {
+  height: 100%;
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+.firstTitle {
+  margin: 0;;
+}
+
 .split {
   height: 100%;
   width: 50%;

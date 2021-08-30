@@ -1,4 +1,7 @@
-var map = L.map("map").setView([0, 0], 1);
+let map = L.map("map", {
+  layer: MQ.mapLayer();
+}).setView([-15, -55], 5);
+
 L.tileLayer(
   "https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=hKsUwUx2YBOu2Scruilx",
   {
