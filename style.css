@@ -15,22 +15,21 @@ body {
   width: 50%;
   position: fixed;
   top: 0;
-  padding-top: 20px;
 }
 
 .left {
   left: 0;
-  padding-left: 20px;
 }
 
 .right {
   right: 0;
-  padding-left: 20px;
 }
 
 padding {
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #map {
