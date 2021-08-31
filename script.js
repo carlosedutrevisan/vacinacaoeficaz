@@ -241,10 +241,6 @@ function fazerLinha() {
 
   var pointList = [origem, destino];
 
-  // Teste da função de distancia
-  let distancia = origem.distanceTo(destino);
-  console.log(distancia);
-
   // Teste da função de crianção de linhas no mapa
   var primeiraLinha = new L.Polyline(pointList, {
     color: 'blue',
@@ -252,11 +248,18 @@ function fazerLinha() {
     opacity: 0.6,
     smoothFactor: 10
   });
+
+  // Teste da função de distancia
+  let distancia = origem.distanceTo(destino);
+  let distanciaPopUp = '<h4>A distância entre ' + origemPopup + ' e ' + destinoPopup + ' é de: ' + parseFloat((distancia/1000).toFixed(1)) + ' quilômetros.</h4>';
+
   primeiraLinha.addTo(map);
-  origemPopup = '<h3>' + origemPopup + '</h3>';
-  destinoPopup = '<h3>' + destinoPopup + '</h3>';
-  L.marker(origem).addTo(map).bindPopup(origemPopup);
-  L.marker(destino).addTo(map).bindPopup(destinoPopup);
+  primeiraLinha.bindPopup(distanciaPopUp);
+
+  let origemPopUpText = '<h3>' + origemPopup + '</h3>'; // Aparece como heading no PopUp
+  let destinoPopUpText = '<h3>' + destinoPopup + '</h3>';
+  L.marker(origem).addTo(map).bindPopup(origemPopUpText);
+  L.marker(destino).addTo(map).bindPopup(destinoPopUpText);
 
   // Seta o mapa para focar nas linhas
   map.setView(primeiraLinha.getCenter(), 6);
