@@ -15,24 +15,25 @@ L.tileLayer(
 
 // Adiciona o Marker inicial para technopolis
 var iconePreto = new L.Icon({
-  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconUrl:
+    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png",
+  shadowUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
-  shadowSize: [41, 41]
+  shadowSize: [41, 41],
 }); // Seta o icone para preto
-var techCoords = L.latLng(-23.9618, -46.3322) // Santos *nossa Techonpolis*
+var techCoords = L.latLng(-23.9618, -46.3322); // Santos *nossa Techonpolis*
 let techMarker = L.marker(techCoords, { icon: iconePreto }).addTo(map);
-techMarker.bindPopup('<h3>Technópolis</h3>').openPopup();
-
-
+techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 
 // Quando o 'testeBotao' for clicado, executa a função fazerLinha()
-document.getElementById('testeBotao').onclick = function () { fazerLinha() };
+document.getElementById("testeBotao").onclick = function () {
+  fazerLinha();
+};
 
 function fazerLinha() {
-
   // Criação de variaveis do tipo LatLong de PR e SP
   const AC = L.latLng(-8.774923453234832, -70.7924176887652);
   const AL = L.latLng(-9.670012731362664, -36.61240787146648);
@@ -41,7 +42,7 @@ function fazerLinha() {
   const BA = L.latLng(-12.977575946740012, -38.50196897959748);
   const CE = L.latLng(-3.728212294433311, -38.525117309581205);
   const ES = L.latLng(-20.27863519798479, -40.292915546998934);
-  const GO = L.latLng(-16.685647532204754, -49.26616338770563)
+  const GO = L.latLng(-16.685647532204754, -49.26616338770563);
   const MA = L.latLng(-2.5313031893117364, -44.29520115699613);
   const MT = L.latLng(-15.59305374235488, -56.107300612569745);
   const MS = L.latLng(-20.477827428370965, -54.61494299514637);
@@ -64,89 +65,116 @@ function fazerLinha() {
 
   var origem = document.getElementById("origem").value;
   var destino = document.getElementById("destino").value;
-  console.log(origem)
+  console.log(origem);
 
   switch (origem) {
     case "AC":
-      origem = AC; origemPopup = "Rio Branco - Acre";
+      origem = AC;
+      origemPopup = "Rio Branco - Acre";
       break;
     case "AL":
-      origem = AL; origemPopup = "Maceió - Alagoas";
+      origem = AL;
+      origemPopup = "Maceió - Alagoas";
       break;
     case "AP":
-      origem = AP; origemPopup = "Macapá - Amapá";
+      origem = AP;
+      origemPopup = "Macapá - Amapá";
       break;
     case "AM":
-      origem = AM; origemPopup = "Manaus - Amazonas";
+      origem = AM;
+      origemPopup = "Manaus - Amazonas";
       break;
     case "BA":
-      origem = BA; origemPopup = "Salvador - Bahia";
+      origem = BA;
+      origemPopup = "Salvador - Bahia";
       break;
     case "CE":
-      origem = CE; origemPopup = "Fortaleza - Ceará";
+      origem = CE;
+      origemPopup = "Fortaleza - Ceará";
       break;
     case "ES":
-      origem = ES; origemPopup = "Vitória - Espírito Santo";
+      origem = ES;
+      origemPopup = "Vitória - Espírito Santo";
       break;
     case "GO":
-      origem = GO; origemPopup = "Goiânia - Goiás";
+      origem = GO;
+      origemPopup = "Goiânia - Goiás";
       break;
     case "MA":
-      origem = MA; origemPopup = "São Luís - Maranhão";
+      origem = MA;
+      origemPopup = "São Luís - Maranhão";
       break;
     case "MT":
-      origem = MT; origemPopup = "Cuiabá - Mato Grosso";
+      origem = MT;
+      origemPopup = "Cuiabá - Mato Grosso";
       break;
     case "MS":
-      origem = MS; origemPopup = "Campo Grande - Mato Grosso do Sul";
+      origem = MS;
+      origemPopup = "Campo Grande - Mato Grosso do Sul";
       break;
     case "MG":
-      origem = MG; origemPopup = "Belo Horizonte - Minas Gerais";
+      origem = MG;
+      origemPopup = "Belo Horizonte - Minas Gerais";
       break;
     case "PA":
-      origem = PA; origemPopup = "Belém - Pará";
+      origem = PA;
+      origemPopup = "Belém - Pará";
       break;
     case "PB":
-      origem = PB; origemPopup = "João Pessoa - Paraíba";
+      origem = PB;
+      origemPopup = "João Pessoa - Paraíba";
       break;
     case "PR":
-      origem = PR; origemPopup = "Curitiba - Paraná";
+      origem = PR;
+      origemPopup = "Curitiba - Paraná";
       break;
     case "PE":
-      origem = PE; origemPopup = "Recife - Pernambuco";
+      origem = PE;
+      origemPopup = "Recife - Pernambuco";
       break;
     case "PI":
-      origem = PI; origemPopup = "Teresina - Piauí";
+      origem = PI;
+      origemPopup = "Teresina - Piauí";
       break;
     case "RJ":
-      origem = RJ; origemPopup = "Rio de Janeiro - Rio de Janeiro";
+      origem = RJ;
+      origemPopup = "Rio de Janeiro - Rio de Janeiro";
       break;
     case "RN":
-      origem = RN; origemPopup = "Natal - Rio Grande do Norte";
+      origem = RN;
+      origemPopup = "Natal - Rio Grande do Norte";
       break;
     case "RS":
-      origem = RS; origemPopup = "Porto Alegre - Rio Grande do Sul";
+      origem = RS;
+      origemPopup = "Porto Alegre - Rio Grande do Sul";
       break;
     case "RO":
-      origem = RO; origemPopup = "Porto Velho - Rondônia";
+      origem = RO;
+      origemPopup = "Porto Velho - Rondônia";
       break;
     case "RR":
-      origem = RR; origemPopup = "Boa Vista - Roraima";
+      origem = RR;
+      origemPopup = "Boa Vista - Roraima";
       break;
     case "SC":
-      origem = SC; origemPopup = "Florianópolis - Santa Catarina";
+      origem = SC;
+      origemPopup = "Florianópolis - Santa Catarina";
       break;
     case "SP":
-      origem = SP; origemPopup = "São Paulo - São Paulo";
+      origem = SP;
+      origemPopup = "São Paulo - São Paulo";
       break;
     case "SE":
-      origem = SE; origemPopup = "Aracaju - Sergipe";
+      origem = SE;
+      origemPopup = "Aracaju - Sergipe";
       break;
     case "TO":
-      origem = TO; origemPopup = "Palmas - Tocantins";
+      origem = TO;
+      origemPopup = "Palmas - Tocantins";
       break;
     case "DF":
-      origem = DF; origemPopup = "Brasília - Distrito Federal";
+      origem = DF;
+      origemPopup = "Brasília - Distrito Federal";
       break;
 
     default:
@@ -154,85 +182,112 @@ function fazerLinha() {
   }
   switch (destino) {
     case "AC":
-      destino = PR; destinoPopup = "Rio Branco - Acre";
+      destino = PR;
+      destinoPopup = "Rio Branco - Acre";
       break;
     case "AL":
-      destino = AL; destinoPopup = "Maceió - Alagoas";
+      destino = AL;
+      destinoPopup = "Maceió - Alagoas";
       break;
     case "AP":
-      destino = AP; destinoPopup = "Macapá - Amapá";
+      destino = AP;
+      destinoPopup = "Macapá - Amapá";
       break;
     case "AM":
-      destino = AM; destinoPopup = "Manaus - Amazonas";
+      destino = AM;
+      destinoPopup = "Manaus - Amazonas";
       break;
     case "BA":
-      destino = BA; destinoPopup = "Salvador - Bahia";
+      destino = BA;
+      destinoPopup = "Salvador - Bahia";
       break;
     case "CE":
-      destino = CE; destinoPopup = "Fortaleza - Ceará";
+      destino = CE;
+      destinoPopup = "Fortaleza - Ceará";
       break;
     case "ES":
-      destino = ES; destinoPopup = "Vitória - Espírito Santo";
+      destino = ES;
+      destinoPopup = "Vitória - Espírito Santo";
       break;
     case "GO":
-      destino = GO; destinoPopup = "Goiânia - Goiás";
+      destino = GO;
+      destinoPopup = "Goiânia - Goiás";
       break;
     case "MA":
-      destino = MA; destinoPopup = "São Luís - Maranhão";
+      destino = MA;
+      destinoPopup = "São Luís - Maranhão";
       break;
     case "MT":
-      destino = MT; destinoPopup = "Cuiabá - Mato Grosso";
+      destino = MT;
+      destinoPopup = "Cuiabá - Mato Grosso";
       break;
     case "MS":
-      destino = MS; destinoPopup = "Campo Grande - Mato Grosso do Sul";
+      destino = MS;
+      destinoPopup = "Campo Grande - Mato Grosso do Sul";
       break;
     case "MG":
-      destino = MG; destinoPopup = "Belo Horizonte - Minas Gerais";
+      destino = MG;
+      destinoPopup = "Belo Horizonte - Minas Gerais";
       break;
     case "PA":
-      destino = PA; destinoPopup = "Belém - Pará";
+      destino = PA;
+      destinoPopup = "Belém - Pará";
       break;
     case "PB":
-      destino = PB; destinoPopup = "João Pessoa - Paraíba";
+      destino = PB;
+      destinoPopup = "João Pessoa - Paraíba";
       break;
     case "PR":
-      destino = PR; destinoPopup = "Curitiba - Paraná";
+      destino = PR;
+      destinoPopup = "Curitiba - Paraná";
       break;
     case "PE":
-      destino = PE; destinoPopup = "Recife - Pernambuco";
+      destino = PE;
+      destinoPopup = "Recife - Pernambuco";
       break;
     case "PI":
-      destino = PI; destinoPopup = "Teresina - Piauí";
+      destino = PI;
+      destinoPopup = "Teresina - Piauí";
       break;
     case "RJ":
-      destino = RJ; destinoPopup = "Rio de Janeiro - Rio de Janeiro";
+      destino = RJ;
+      destinoPopup = "Rio de Janeiro - Rio de Janeiro";
       break;
     case "RN":
-      destino = RN; destinoPopup = "Natal - Rio Grande do Norte";
+      destino = RN;
+      destinoPopup = "Natal - Rio Grande do Norte";
       break;
     case "RS":
-      destino = RS; destinoPopup = "Porto Alegre - Rio Grande do Sul";
+      destino = RS;
+      destinoPopup = "Porto Alegre - Rio Grande do Sul";
       break;
     case "RO":
-      destino = RO; destinoPopup = "Porto Velho - Rondônia";
+      destino = RO;
+      destinoPopup = "Porto Velho - Rondônia";
       break;
     case "RR":
-      destino = RR; destinoPopup = "Boa Vista - Roraima";
+      destino = RR;
+      destinoPopup = "Boa Vista - Roraima";
       break;
     case "SC":
-      destino = SC; destinoPopup = "Florianópolis - Santa Catarina";
+      destino = SC;
+      destinoPopup = "Florianópolis - Santa Catarina";
       break;
     case "SP":
-      destino = SP; destinoPopup = "São Paulo - São Paulo";
+      destino = SP;
+      destinoPopup = "São Paulo - São Paulo";
       break;
     case "SE":
-      destino = SE; destinoPopup = "Aracaju - Sergipe";
+      destino = SE;
+      destinoPopup = "Aracaju - Sergipe";
       break;
     case "TO":
-      destino = TO; destinoPopup = "Palmas - Tocantins";
+      destino = TO;
+      destinoPopup = "Palmas - Tocantins";
       break;
     case "DF":
-      destino = DF; destinoPopup = "Brasília - Distrito Federal";
+      destino = DF;
+      destinoPopup = "Brasília - Distrito Federal";
       break;
 
     default:
@@ -243,21 +298,28 @@ function fazerLinha() {
 
   // Teste da função de crianção de linhas no mapa
   var primeiraLinha = new L.Polyline(pointList, {
-    color: 'blue',
+    color: "blue",
     weight: 3,
     opacity: 0.6,
-    smoothFactor: 10
+    smoothFactor: 10,
   });
 
   // Teste da função de distancia
   let distancia = origem.distanceTo(destino);
-  let distanciaPopUp = '<h4>A distância entre ' + origemPopup + ' e ' + destinoPopup + ' é de: ' + parseFloat((distancia/1000).toFixed(1)) + ' quilômetros.</h4>';
+  let distanciaPopUp =
+    "<h4>A distância entre " +
+    origemPopup +
+    " e " +
+    destinoPopup +
+    " é de: " +
+    parseFloat((distancia / 1000).toFixed(1)) +
+    " quilômetros.</h4>";
 
   primeiraLinha.addTo(map);
   primeiraLinha.bindPopup(distanciaPopUp);
 
-  let origemPopUpText = '<h3>' + origemPopup + '</h3>'; // Aparece como heading no PopUp
-  let destinoPopUpText = '<h3>' + destinoPopup + '</h3>';
+  let origemPopUpText = "<h3>" + origemPopup + "</h3>"; // Aparece como heading no PopUp
+  let destinoPopUpText = "<h3>" + destinoPopup + "</h3>";
   L.marker(origem).addTo(map).bindPopup(origemPopUpText);
   L.marker(destino).addTo(map).bindPopup(destinoPopUpText);
 
