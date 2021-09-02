@@ -100,14 +100,6 @@ function pegarEstados() {
   );
   let pontosLinhasEstados = pegarCoords(selecEstadosSim);
   console.log(pontosLinhasEstados);
-
-  var linhaEstados = new L.Polyline(pontosLinhasEstados, {
-    color: "blue",
-    weight: 3,
-    opacity: 0.6,
-    smoothFactor: 10,
-  }).addTo(map);
-
   organizarOrdem(pontosLinhasEstados);
 }
 
@@ -120,8 +112,10 @@ function organizarOrdem(arrayDesor) {
       let davezOrg = arrayOrgan[arrayOrgan.length - 1];
       let davezDesorg = arrayDesor[j];
       let tmpDist = davezOrg.distanceTo(davezDesorg);
-      if (j == 0) menorDist = tmpDist;
-      else if (tmpDist < menorDist) {
+      if (j == 0) {
+        menorDist = tmpDist;
+        menorDistID = j;
+      } else if (tmpDist < menorDist) {
         menorDist = tmpDist;
         menorDistID = j;
       }
@@ -132,7 +126,5 @@ function organizarOrdem(arrayDesor) {
       [arrayOrgan[arrayOrgan.length - 2], arrayOrgan[arrayOrgan.length - 1]],
       { color: "red" }
     ).addTo(map);
-    console.log(arrayOrgan);
   }
-  console.log(arrayDesor, " salve ", arrayOrgan);
 }
