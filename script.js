@@ -93,6 +93,10 @@ document.getElementById("testeBotao").onclick = function () {
   pegarEstados();
 };
 
+document.getElementById("testeBotao2").onclick = function () {
+  console.log("clicou mano");
+};
+
 function pegarEstados() {
   let selecEstados = document.getElementById("selecEstados");
   let selecEstadosSim = [...selecEstados.selectedOptions].map(
@@ -122,9 +126,19 @@ function organizarOrdem(arrayDesor) {
     }
     arrayOrgan.push(arrayDesor[menorDistID]);
     arrayDesor.splice(menorDistID, 1);
-    var polyline = L.polyline(
-      [arrayOrgan[arrayOrgan.length - 2], arrayOrgan[arrayOrgan.length - 1]],
-      { color: "#" + ((1<<24)*Math.random() | 0).toString(16) }
-    ).addTo(map);
+
+    fazerLinha(
+      arrayOrgan[arrayOrgan.length - 2],
+      arrayOrgan[arrayOrgan.length - 1]
+    );
   }
+}
+
+function fazerLinha(origem, destino) {
+  var polyline = L.polyline([origem, destino], {
+    color: "rgb(230, 28, 93)",
+    weight: 4,
+    opacity: 0.8,
+    smoothFactor: 10,
+  }).addTo(map);
 }

@@ -15,12 +15,16 @@
 </head>
 
 <body>
-    <div class="split left">
+    <div>
         <center>
-            <h1>Vacinação Eficaz</h1>
-            <h2>
-                Estados que precisam de vacina:
-            </h2>
+            <div class="card" id="testeBotao2">
+                <div class="container">
+                    <h1>Vacinação Eficaz</h1>
+                    <h2>
+                        Estados que precisam de vacina:
+                    </h2>
+                </div>
+            </div>
             <select class="selete" name="selecEstados" id="selecEstados" multiple size=4>
                 <option value=AC>Acre (AC)</option>
                 <option value=AL>Alagoas (AL)</option>
@@ -50,19 +54,20 @@
                 <option value=SE>Sergipe (SE)</option>
                 <option value=TO>Tocantins (TO)</option>
             </select>
-            <div style="margin: 10px;">
-                <button type="button" id="testeBotao" class="button">
-                    Faça a melhor rota!
-                </button>
+            <div style="margin: 15px;">
+                <div type="button" id="testeBotao" class="button">
+                    <p class="fonteButton">
+                        Faça a melhor rota!
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div id="map" class="mapStyle"></div>
             </div>
         </center>
     </div>
-
-    <div class="split right">
-        <h1>Mapa</h1>
-        <div id="map"></div>
-    </div>
     <script src="script.js"></script>
+
 </body>
 
 </html>
