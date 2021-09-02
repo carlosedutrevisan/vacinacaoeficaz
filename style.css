@@ -22,21 +22,6 @@ body {
   color: rgb(34, 40, 49);
 }
 
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  top: 0;
-}
-
-.left {
-  left: 0;
-}
-
-.right {
-  right: 0;
-}
-
 #map {
   position: sticky;
   top: 0;
@@ -57,7 +42,6 @@ body {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   transition: 0.3s;
-  width: 60%;
   border-radius: 5px;
   background-color: rgb(57, 62, 70);
   padding: 10px;

@@ -92,11 +92,6 @@ techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 document.getElementById("testeBotao").onclick = function () {
   pegarEstados();
 };
-
-document.getElementById("testeBotao2").onclick = function () {
-  console.log("clicou mano");
-};
-
 function pegarEstados() {
   let selecEstados = document.getElementById("selecEstados");
   let selecEstadosSim = [...selecEstados.selectedOptions].map(
@@ -127,10 +122,13 @@ function organizarOrdem(arrayDesor) {
     arrayOrgan.push(arrayDesor[menorDistID]);
     arrayDesor.splice(menorDistID, 1);
 
-    fazerLinha(
+    let coords = [
       arrayOrgan[arrayOrgan.length - 2],
-      arrayOrgan[arrayOrgan.length - 1]
-    );
+      arrayOrgan[arrayOrgan.length - 1],
+    ];
+
+    fazerLinha(coords[0], coords[1]);
+    fazerCard(coords[0], coords[1]);
   }
 }
 
@@ -141,4 +139,49 @@ function fazerLinha(origem, destino) {
     opacity: 0.8,
     smoothFactor: 10,
   }).addTo(map);
+}
+
+function fazerCard(origem, destino) {
+  const divDasCards = document.getElementById("rotasLista");
+  var cartaDaVez = document.createElement("div");
+  cartaDaVez.className = "card";
+  cartaDaVez.style = "width: 40%;";
+
+  var origemStrign =
+    "Linha de " + verLugar(origem) + " até " + verLugar(destino);
+
+  cartaDaVez.innerText = origemStrign;
+  divDasCards.append(cartaDaVez);
+}
+
+function verLugar(lugar) {
+  if (lugar == SP) return "Technópolis";
+  if (lugar == SP) return "São Paulo - São Paulo";
+  if (lugar == PR) return "Rio Branco - Acre";
+  if (lugar == AL) return "Maceió - Alagoas";
+  if (lugar == AP) return "Macapá - Amapá";
+  if (lugar == AM) return "Manaus - Amazonas";
+  if (lugar == BA) return "Salvador - Bahia";
+  if (lugar == CE) return "Fortaleza - Ceará";
+  if (lugar == ES) return "Vitória - Espírito Santo";
+  if (lugar == GO) return "Goiânia - Goiás";
+  if (lugar == MA) return "São Luís - Maranhão";
+  if (lugar == MT) return "Cuiabá - Mato Grosso";
+  if (lugar == MS) return "Campo Grande - Mato Grosso do Sul";
+  if (lugar == MG) return "Belo Horizonte - Minas Gerais";
+  if (lugar == PA) return "Belém - Pará";
+  if (lugar == PB) return "João Pessoa - Paraíba";
+  if (lugar == PR) return "Curitiba - Paraná";
+  if (lugar == PE) return "Recife - Pernambuco";
+  if (lugar == PI) return "Teresina - Piauí";
+  if (lugar == RJ) return "Rio de Janeiro - Rio de Janeiro";
+  if (lugar == RN) return "Natal - Rio Grande do Norte";
+  if (lugar == RS) return "Porto Alegre - Rio Grande do Sul";
+  if (lugar == RO) return "Porto Velho - Rondônia";
+  if (lugar == RR) return "Boa Vista - Roraima";
+  if (lugar == SC) return "Florianópolis - Santa Catarina";
+  if (lugar == SP) return "São Paulo - São Paulo";
+  if (lugar == SE) return "Aracaju - Sergipe";
+  if (lugar == TO) return "Palmas - Tocantins";
+  if (lugar == DF) return "Brasília - Distrito Federal";
 }
