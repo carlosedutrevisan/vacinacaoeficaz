@@ -88,8 +88,8 @@ var iconePreto = new L.Icon({
 let techMarker = L.marker(TEC, { icon: iconePreto }).addTo(map);
 techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 
-// Quando o 'testeBotao' for clicado, executa a função fazerLinha()
-document.getElementById("testeBotao").onclick = function () {
+// Quando o 'botaoanimado' for clicado, executa a função fazerLinha()
+document.getElementById("botaoanimado").onclick = function () {
   pegarEstados();
 };
 function pegarEstados() {
