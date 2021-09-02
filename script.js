@@ -124,7 +124,7 @@ function organizarOrdem(arrayDesor) {
     arrayDesor.splice(menorDistID, 1);
     var polyline = L.polyline(
       [arrayOrgan[arrayOrgan.length - 2], arrayOrgan[arrayOrgan.length - 1]],
-      { color: "red" }
+      { color: "#" + ((1<<24)*Math.random() | 0).toString(16) }
     ).addTo(map);
   }
 }
