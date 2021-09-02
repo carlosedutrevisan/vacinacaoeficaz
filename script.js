@@ -136,7 +136,7 @@ function organizarOrdem(arrayDesor) {
 
 function fazerLinha(origem, destino) {
   var polyline = L.polyline([origem, destino], {
-    color: "rgb(230, 28, 93)",
+    color: "rgb(18, 110, 130)",
     weight: 4,
     opacity: 0.8,
     smoothFactor: 10,
