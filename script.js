@@ -148,16 +148,16 @@ function fazerCard(origem, destino) {
   cartaDaVez.style = "width: 40%;";
 
   var origemStrign =
-    "Linha de " + verLugar(origem) + " até " + verLugar(destino);
+    "De " + verLugar(origem) + " até " + verLugar(destino);
 
   cartaDaVez.innerText = origemStrign;
   divDasCards.append(cartaDaVez);
 }
 
 function verLugar(lugar) {
-  if (lugar == SP) return "Technópolis";
+  if (lugar == TEC) return "Technópolis";
   if (lugar == SP) return "São Paulo - São Paulo";
-  if (lugar == PR) return "Rio Branco - Acre";
+  if (lugar == AC) return "Rio Branco - Acre";
   if (lugar == AL) return "Maceió - Alagoas";
   if (lugar == AP) return "Macapá - Amapá";
   if (lugar == AM) return "Manaus - Amazonas";
