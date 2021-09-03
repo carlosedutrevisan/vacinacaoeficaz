@@ -181,3 +181,13 @@ function verLugar(lugar) {
     if (lugar == TO) return "Palmas - Tocantins";
     if (lugar == DF) return "Brasília - Distrito Federal";
 }
+
+let testeSelect = false;
+testeSelectID = document.getElementById("testeSelec");
+testeSelectID.onclick = function() {
+    if (testeSelect == false) testeSelect = true;
+    else testeSelect = false;
+    if (testeSelect) testeSelectID.className = "cardBotaoSimClick";
+    else testeSelectID.className = "cardBotaoNaoClick";
+    // console.log(testeSelect);
+};

@@ -19,13 +19,16 @@
 <body>
     <center>
         <div>
-            <div class="card" id="testeBotao2" style="width: 30%;">
+            <div class="card" id="testeBotao2" style="width: fit-content;">
                 <div class="container">
                     <h1 style="font-size: 36px;">Vacinação Eficaz</h1>
-                    <h2 style="font-size: 28px;">
+                    <h2 style="font-size: 20px;">
                         Estados que precisam de vacina:
                     </h2>
                 </div>
+            </div>
+            <button id="testeSelec" class="cardBotaoNaoClick" style="width: 10%;">
+                Teste
             </div>
             <select class="selete" name="selecEstados" id="selecEstados" multiple size=4>
                 <option value=AC>Acre (AC)</option>
@@ -61,7 +64,7 @@
                     Calcular
                     <span class="material-icons" id="icon">room</span>
                 </button>
-            </div>
+        </div>
         </div>
         <div class="cardMapa">
             <div id="map" class="mapStyle"></div>

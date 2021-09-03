@@ -1,6 +1,6 @@
 body {
     font-family: Poppins;
-    color: rgb(238, 238, 238);
+    color: rgb(0, 0, 0);
     background-color: rgb(34, 40, 49);
 }
 
@@ -25,8 +25,28 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
     transition: 0.3s;
     border-radius: 10px;
-    background-color: rgb(57, 62, 70);
-    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardBotaoNaoClick {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardBotaoSimClick {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: rgb(128, 237, 153);
+    padding: 15px;
     margin: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
