@@ -312,9 +312,94 @@ function pegarEstados() {
             pontosLinhasEstados.push(GO);
         } else {
             GOSelectID.className = "cardBotaoNaoClick";
-            removerGOtadoDaArray(pontosLinhasEstados, GO);
+            removerEstadoDaArray(pontosLinhasEstados, GO);
         }
     };
+
+    let MASelect = false;
+    MASelectID = document.getElementById("MASelect");
+    MASelectID.onclick = function() {
+        if (MASelect == false) MASelect = true;
+        else MASelect = false;
+        if (MASelect) {
+            MASelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(MA);
+        } else {
+            MASelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, MA);
+        }
+    };
+
+    let MTSelect = false;
+    MTSelectID = document.getElementById("MTSelect");
+    MTSelectID.onclick = function() {
+        if (MTSelect == false) MTSelect = true;
+        else MTSelect = false;
+        if (MTSelect) {
+            MTSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(MT);
+        } else {
+            MTSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, MT);
+        }
+    };
+
+    let MSSelect = false;
+    MSSelectID = document.getElementById("MSSelect");
+    MSSelectID.onclick = function() {
+        if (MSSelect == false) MSSelect = true;
+        else MSSelect = false;
+        if (MSSelect) {
+            MSSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(MS);
+        } else {
+            MSSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, MS);
+        }
+    };
+
+    let MGSelect = false;
+    MGSelectID = document.getElementById("MGSelect");
+    MGSelectID.onclick = function() {
+        if (MGSelect == false) MGSelect = true;
+        else MGSelect = false;
+        if (MGSelect) {
+            MGSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(MG);
+        } else {
+            MGSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, MG);
+        }
+    };
+
+    let PASelect = false;
+    PASelectID = document.getElementById("PASelect");
+    PASelectID.onclick = function() {
+        if (PASelect == false) PASelect = true;
+        else PASelect = false;
+        if (PASelect) {
+            PASelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(PA);
+        } else {
+            PASelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, PA);
+        }
+    };
+
+    let PBSelect = false;
+    PBSelectID = document.getElementById("PBSelect");
+    PBSelectID.onclick = function() {
+        if (PBSelect == false) PBSelect = true;
+        else PBSelect = false;
+        if (PBSelect) {
+            PBSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(PB);
+        } else {
+            PBSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, PB);
+        }
+    };
+
 }
 
 document.getElementById("botaoanimado").onclick = function() {
