@@ -1,4 +1,5 @@
 const TEC = L.latLng({ lat: -23.9618, lng: -46.3322 });
+const TEC1 = L.latLng({ lat: -23.9918, lng: -46.3322 });
 const AC = L.latLng({ lat: -8.774923453234832, lng: -70.7924176887652 });
 const AL = L.latLng({ lat: -9.670012731362664, lng: -36.61240787146648 });
 const AP = L.latLng({ lat: 0.041642998897892525, lng: -51.055836918225644 });
@@ -182,12 +183,43 @@ function verLugar(lugar) {
     if (lugar == DF) return "Brasília - Distrito Federal";
 }
 
-let testeSelect = false;
-testeSelectID = document.getElementById("testeSelec");
-testeSelectID.onclick = function() {
-    if (testeSelect == false) testeSelect = true;
-    else testeSelect = false;
-    if (testeSelect) testeSelectID.className = "cardBotaoSimClick";
-    else testeSelectID.className = "cardBotaoNaoClick";
-    // console.log(testeSelect);
+function removerEstadoDaArray(arr, estadoApagar) {
+    var i = 0;
+    while (i < arr.length) {
+        if (arr[i] === estadoApagar) arr.splice(i, 1);
+        else i++;
+    }
+    return arr;
+}
+
+let testArray = [];
+
+let ACSelect = false;
+ACSelectID = document.getElementById("ACSelect");
+ACSelectID.onclick = function() {
+    if (ACSelect == false) ACSelect = true;
+    else ACSelect = false;
+    if (ACSelect) {
+        ACSelectID.className = "cardBotaoSimClick";
+        testArray.push(AC);
+    } else {
+        ACSelectID.className = "cardBotaoNaoClick";
+        removerEstadoDaArray(testArray, AC);
+    }
+    console.log(testArray);
+};
+
+let AMSelect = false;
+AMSelectID = document.getElementById("AMSelect");
+AMSelectID.onclick = function() {
+    if (AMSelect == false) AMSelect = true;
+    else AMSelect = false;
+    if (AMSelect) {
+        AMSelectID.className = "cardBotaoSimClick";
+        testArray.push(AM);
+    } else {
+        AMSelectID.className = "cardBotaoNaoClick";
+        removerEstadoDaArray(testArray, AM);
+    }
+    console.log(testArray);
 };
