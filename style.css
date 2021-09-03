@@ -35,12 +35,12 @@ body {
 .cardMapa {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
   transition: 0.3s;
-  width: 1000px;
-  height: 1000px;
+  width: 80%;
+  height: 80%;
   border-radius: 5px;
   background-color: rgb(57, 62, 70);
   padding: 10px;
-  margin: 10px;
+  margin: auto;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 

@@ -92,17 +92,17 @@ techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 document.getElementById("botaoanimado").onclick = function () {
   pegarEstados();
 };
+
 function pegarEstados() {
   let selecEstados = document.getElementById("selecEstados");
   let selecEstadosSim = [...selecEstados.selectedOptions].map(
     (option) => option.value
   );
   let pontosLinhasEstados = pegarCoords(selecEstadosSim);
-  console.log(pontosLinhasEstados);
   organizarOrdem(pontosLinhasEstados);
 }
 
-function organizarOrdem(arrayDesor) {
+function organizarOrdem(arrayDesor) { // nearest neighbour (NN) algorithm
   let arrayOrgan = [TEC];
   let counter = arrayDesor.length;
   for (let i = 0; i < counter; i++) {
@@ -146,10 +146,8 @@ function fazerCard(origem, destino) {
   var cartaDaVez = document.createElement("div");
   cartaDaVez.className = "card";
   cartaDaVez.style = "width: 40%;";
-
   var origemStrign =
     "De " + verLugar(origem) + " até " + verLugar(destino);
-
   cartaDaVez.innerText = origemStrign;
   divDasCards.append(cartaDaVez);
 }
