@@ -85,21 +85,9 @@ var iconePreto = new L.Icon({
 let techMarker = L.marker(TEC, { icon: iconePreto }).addTo(map);
 techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 
-// Quando o 'botaoanimado' for clicado, executa a função fazerLinha()
-document.getElementById("botaoanimado").onclick = function() {
-    pegarEstados();
-};
-
-function pegarEstados() {
-    let selecEstados = document.getElementById("selecEstados");
-    let selecEstadosSim = [...selecEstados.selectedOptions].map(
-        (option) => option.value
-    );
-    let pontosLinhasEstados = pegarCoords(selecEstadosSim);
-    organizarOrdem(pontosLinhasEstados);
-}
-
-function organizarOrdem(arrayDesor) { // nearest neighbour (NN) algorithm
+function organizarOrdem(arrayDesor) {
+    // nearest neighbour (NN) algorithm
+    console.log(arrayDesor);
     let arrayOrgan = [TEC];
     let counter = arrayDesor.length;
     for (let i = 0; i < counter; i++) {
@@ -145,8 +133,14 @@ function fazerCard(origem, destino) {
     cartaDaVez.className = "card";
     cartaDaVez.style = "width: 40%;";
     var origemStrign =
-        "<p>De " + verLugar(origem) + " até " + verLugar(destino) + "<br /></p>" +
-        "<p>A distância entre esse dois pontos é de " + distanciaDosDoisPontos.toFixed(0) + " quilômetros.</p>";
+        "<p>De " +
+        verLugar(origem) +
+        " até " +
+        verLugar(destino) +
+        "<br /></p>" +
+        "<p>A distância entre esse dois pontos é de " +
+        distanciaDosDoisPontos.toFixed(0) +
+        " quilômetros.</p>";
     cartaDaVez.innerHTML = origemStrign;
     divDasCards.append(cartaDaVez);
 }
@@ -192,34 +186,137 @@ function removerEstadoDaArray(arr, estadoApagar) {
     return arr;
 }
 
-let testArray = [];
+let pontosLinhasEstados = [];
+pegarEstados();
 
-let ACSelect = false;
-ACSelectID = document.getElementById("ACSelect");
-ACSelectID.onclick = function() {
-    if (ACSelect == false) ACSelect = true;
-    else ACSelect = false;
-    if (ACSelect) {
-        ACSelectID.className = "cardBotaoSimClick";
-        testArray.push(AC);
-    } else {
-        ACSelectID.className = "cardBotaoNaoClick";
-        removerEstadoDaArray(testArray, AC);
-    }
-    console.log(testArray);
-};
+function pegarEstados() {
+    let ACSelect = false;
+    ACSelectID = document.getElementById("ACSelect");
+    ACSelectID.onclick = function() {
+        if (ACSelect == false) ACSelect = true;
+        else ACSelect = false;
+        if (ACSelect) {
+            ACSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(AC);
+        } else {
+            ACSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, AC);
+        }
+    };
 
-let AMSelect = false;
-AMSelectID = document.getElementById("AMSelect");
-AMSelectID.onclick = function() {
-    if (AMSelect == false) AMSelect = true;
-    else AMSelect = false;
-    if (AMSelect) {
-        AMSelectID.className = "cardBotaoSimClick";
-        testArray.push(AM);
-    } else {
-        AMSelectID.className = "cardBotaoNaoClick";
-        removerEstadoDaArray(testArray, AM);
-    }
-    console.log(testArray);
+    let ALSelect = false;
+    ALSelectID = document.getElementById("ALSelect");
+    ALSelectID.onclick = function() {
+        if (ALSelect == false) ALSelect = true;
+        else ALSelect = false;
+        if (ALSelect) {
+            ALSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(AL);
+        } else {
+            ALSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, AL);
+        }
+    };
+
+    let APSelect = false;
+    APSelectID = document.getElementById("APSelect");
+    APSelectID.onclick = function() {
+        if (APSelect == false) APSelect = true;
+        else APSelect = false;
+        if (APSelect) {
+            APSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(AP);
+        } else {
+            APSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, AP);
+        }
+    };
+
+    let AMSelect = false;
+    AMSelectID = document.getElementById("AMSelect");
+    AMSelectID.onclick = function() {
+        if (AMSelect == false) AMSelect = true;
+        else AMSelect = false;
+        if (AMSelect) {
+            AMSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(AM);
+        } else {
+            AMSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, AM);
+        }
+    };
+
+    let BASelect = false;
+    BASelectID = document.getElementById("BASelect");
+    BASelectID.onclick = function() {
+        if (BASelect == false) BASelect = true;
+        else BASelect = false;
+        if (BASelect) {
+            BASelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(BA);
+        } else {
+            BASelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, BA);
+        }
+    };
+
+    let CESelect = false;
+    CESelectID = document.getElementById("CESelect");
+    CESelectID.onclick = function() {
+        if (CESelect == false) CESelect = true;
+        else CESelect = false;
+        if (CESelect) {
+            CESelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(CE);
+        } else {
+            CESelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, CE);
+        }
+    };
+
+    let DFSelect = false;
+    DFSelectID = document.getElementById("DFSelect");
+    DFSelectID.onclick = function() {
+        if (DFSelect == false) DFSelect = true;
+        else DFSelect = false;
+        if (DFSelect) {
+            DFSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(DF);
+        } else {
+            DFSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, DF);
+        }
+    };
+
+    let ESSelect = false;
+    ESSelectID = document.getElementById("ESSelect");
+    ESSelectID.onclick = function() {
+        if (ESSelect == false) ESSelect = true;
+        else ESSelect = false;
+        if (ESSelect) {
+            ESSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(ES);
+        } else {
+            ESSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, ES);
+        }
+    };
+
+    let GOSelect = false;
+    GOSelectID = document.getElementById("GOSelect");
+    GOSelectID.onclick = function() {
+        if (GOSelect == false) GOSelect = true;
+        else GOSelect = false;
+        if (GOSelect) {
+            GOSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(GO);
+        } else {
+            GOSelectID.className = "cardBotaoNaoClick";
+            removerGOtadoDaArray(pontosLinhasEstados, GO);
+        }
+    };
+}
+
+document.getElementById("botaoanimado").onclick = function() {
+    organizarOrdem(pontosLinhasEstados);
 };
