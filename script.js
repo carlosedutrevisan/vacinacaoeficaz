@@ -28,158 +28,156 @@ const TO = L.latLng({ lat: -10.250592736260634, lng: -48.32526386846129 });
 const DF = L.latLng({ lat: -15.75467391238458, lng: -47.89675639486514 });
 
 function pegarCoords(estados) {
-  let coordsPontos = [];
-  if (estados.includes("AC")) coordsPontos.push(AC);
-  if (estados.includes("AL")) coordsPontos.push(AL);
-  if (estados.includes("AP")) coordsPontos.push(AP);
-  if (estados.includes("AM")) coordsPontos.push(AM);
-  if (estados.includes("BA")) coordsPontos.push(BA);
-  if (estados.includes("CE")) coordsPontos.push(CE);
-  if (estados.includes("ES")) coordsPontos.push(ES);
-  if (estados.includes("GO")) coordsPontos.push(GO);
-  if (estados.includes("MA")) coordsPontos.push(MA);
-  if (estados.includes("MT")) coordsPontos.push(MT);
-  if (estados.includes("MS")) coordsPontos.push(MS);
-  if (estados.includes("MG")) coordsPontos.push(MG);
-  if (estados.includes("PA")) coordsPontos.push(PA);
-  if (estados.includes("PB")) coordsPontos.push(PB);
-  if (estados.includes("PR")) coordsPontos.push(PR);
-  if (estados.includes("PE")) coordsPontos.push(PE);
-  if (estados.includes("PI")) coordsPontos.push(PI);
-  if (estados.includes("RJ")) coordsPontos.push(RJ);
-  if (estados.includes("RN")) coordsPontos.push(RN);
-  if (estados.includes("RS")) coordsPontos.push(RS);
-  if (estados.includes("RO")) coordsPontos.push(RO);
-  if (estados.includes("RR")) coordsPontos.push(RR);
-  if (estados.includes("SC")) coordsPontos.push(SC);
-  if (estados.includes("SP")) coordsPontos.push(SP);
-  if (estados.includes("SE")) coordsPontos.push(SE);
-  if (estados.includes("TO")) coordsPontos.push(TO);
-  if (estados.includes("DF")) coordsPontos.push(DF);
+    let coordsPontos = [];
+    if (estados.includes("AC")) coordsPontos.push(AC);
+    if (estados.includes("AL")) coordsPontos.push(AL);
+    if (estados.includes("AP")) coordsPontos.push(AP);
+    if (estados.includes("AM")) coordsPontos.push(AM);
+    if (estados.includes("BA")) coordsPontos.push(BA);
+    if (estados.includes("CE")) coordsPontos.push(CE);
+    if (estados.includes("ES")) coordsPontos.push(ES);
+    if (estados.includes("GO")) coordsPontos.push(GO);
+    if (estados.includes("MA")) coordsPontos.push(MA);
+    if (estados.includes("MT")) coordsPontos.push(MT);
+    if (estados.includes("MS")) coordsPontos.push(MS);
+    if (estados.includes("MG")) coordsPontos.push(MG);
+    if (estados.includes("PA")) coordsPontos.push(PA);
+    if (estados.includes("PB")) coordsPontos.push(PB);
+    if (estados.includes("PR")) coordsPontos.push(PR);
+    if (estados.includes("PE")) coordsPontos.push(PE);
+    if (estados.includes("PI")) coordsPontos.push(PI);
+    if (estados.includes("RJ")) coordsPontos.push(RJ);
+    if (estados.includes("RN")) coordsPontos.push(RN);
+    if (estados.includes("RS")) coordsPontos.push(RS);
+    if (estados.includes("RO")) coordsPontos.push(RO);
+    if (estados.includes("RR")) coordsPontos.push(RR);
+    if (estados.includes("SC")) coordsPontos.push(SC);
+    if (estados.includes("SP")) coordsPontos.push(SP);
+    if (estados.includes("SE")) coordsPontos.push(SE);
+    if (estados.includes("TO")) coordsPontos.push(TO);
+    if (estados.includes("DF")) coordsPontos.push(DF);
 
-  return coordsPontos;
+    return coordsPontos;
 }
 
 // Criação do mapa setando para o Brasil em um zoom que pega tudo
 var map = L.map("map").setView([-15, -55], 5);
 L.tileLayer(
-  "https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=hKsUwUx2YBOu2Scruilx",
-  {
-    tileSize: 512,
-    zoomOffset: -1,
-    minZoom: 1,
-    attribution:
-      '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e',
-    crossOrigin: true,
-  }
+    "https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=hKsUwUx2YBOu2Scruilx", {
+        tileSize: 512,
+        zoomOffset: -1,
+        minZoom: 1,
+        attribution: '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e',
+        crossOrigin: true,
+    }
 ).addTo(map);
 
 // Adiciona o Marker inicial para technopolis
 var iconePreto = new L.Icon({
-  iconUrl:
-    "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png",
-  shadowUrl:
-    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
+    iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png",
+    shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41],
 }); // Seta o icone para preto
 let techMarker = L.marker(TEC, { icon: iconePreto }).addTo(map);
 techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 
 // Quando o 'botaoanimado' for clicado, executa a função fazerLinha()
-document.getElementById("botaoanimado").onclick = function () {
-  pegarEstados();
+document.getElementById("botaoanimado").onclick = function() {
+    pegarEstados();
 };
 
 function pegarEstados() {
-  let selecEstados = document.getElementById("selecEstados");
-  let selecEstadosSim = [...selecEstados.selectedOptions].map(
-    (option) => option.value
-  );
-  let pontosLinhasEstados = pegarCoords(selecEstadosSim);
-  organizarOrdem(pontosLinhasEstados);
+    let selecEstados = document.getElementById("selecEstados");
+    let selecEstadosSim = [...selecEstados.selectedOptions].map(
+        (option) => option.value
+    );
+    let pontosLinhasEstados = pegarCoords(selecEstadosSim);
+    organizarOrdem(pontosLinhasEstados);
 }
 
 function organizarOrdem(arrayDesor) { // nearest neighbour (NN) algorithm
-  let arrayOrgan = [TEC];
-  let counter = arrayDesor.length;
-  for (let i = 0; i < counter; i++) {
-    let menorDist, menorDistID;
-    for (let j = 0; j < arrayDesor.length; j++) {
-      let davezOrg = arrayOrgan[arrayOrgan.length - 1];
-      let davezDesorg = arrayDesor[j];
-      let tmpDist = davezOrg.distanceTo(davezDesorg);
-      if (j == 0) {
-        menorDist = tmpDist;
-        menorDistID = j;
-      } else if (tmpDist < menorDist) {
-        menorDist = tmpDist;
-        menorDistID = j;
-      }
+    let arrayOrgan = [TEC];
+    let counter = arrayDesor.length;
+    for (let i = 0; i < counter; i++) {
+        let menorDist, menorDistID;
+        for (let j = 0; j < arrayDesor.length; j++) {
+            let davezOrg = arrayOrgan[arrayOrgan.length - 1];
+            let davezDesorg = arrayDesor[j];
+            let tmpDist = davezOrg.distanceTo(davezDesorg);
+            if (j == 0) {
+                menorDist = tmpDist;
+                menorDistID = j;
+            } else if (tmpDist < menorDist) {
+                menorDist = tmpDist;
+                menorDistID = j;
+            }
+        }
+        arrayOrgan.push(arrayDesor[menorDistID]);
+        arrayDesor.splice(menorDistID, 1);
+
+        let coords = [
+            arrayOrgan[arrayOrgan.length - 2],
+            arrayOrgan[arrayOrgan.length - 1],
+        ];
+
+        fazerLinha(coords[0], coords[1]);
+        fazerCard(coords[0], coords[1]);
     }
-    arrayOrgan.push(arrayDesor[menorDistID]);
-    arrayDesor.splice(menorDistID, 1);
-
-    let coords = [
-      arrayOrgan[arrayOrgan.length - 2],
-      arrayOrgan[arrayOrgan.length - 1],
-    ];
-
-    fazerLinha(coords[0], coords[1]);
-    fazerCard(coords[0], coords[1]);
-  }
 }
 
 function fazerLinha(origem, destino) {
-  var polyline = L.polyline([origem, destino], {
-    color: "rgb(18, 110, 130)",
-    weight: 4,
-    opacity: 0.8,
-    smoothFactor: 10,
-  }).addTo(map);
+    var polyline = L.polyline([origem, destino], {
+        color: "rgb(18, 110, 130)",
+        weight: 4,
+        opacity: 0.8,
+        smoothFactor: 10,
+    }).addTo(map);
 }
 
 function fazerCard(origem, destino) {
-  const divDasCards = document.getElementById("rotasLista");
-  var cartaDaVez = document.createElement("div");
-  cartaDaVez.className = "card";
-  cartaDaVez.style = "width: 40%;";
-  var origemStrign =
-    "<p>De " + verLugar(origem) + " até " + verLugar(destino) + "<br /></p>";
-  cartaDaVez.innerHTML = origemStrign;
-  divDasCards.append(cartaDaVez);
+    const divDasCards = document.getElementById("rotasLista");
+    var cartaDaVez = document.createElement("div");
+    var distanciaDosDoisPontos = origem.distanceTo(destino) / 1000;
+    cartaDaVez.className = "card";
+    cartaDaVez.style = "width: 40%;";
+    var origemStrign =
+        "<p>De " + verLugar(origem) + " até " + verLugar(destino) + "<br /></p>" +
+        "<p>A distância entre esse dois pontos é de " + distanciaDosDoisPontos.toFixed(0) + " quilômetros.</p>";
+    cartaDaVez.innerHTML = origemStrign;
+    divDasCards.append(cartaDaVez);
 }
 
 function verLugar(lugar) {
-  if (lugar == TEC) return "Technópolis";
-  if (lugar == SP) return "São Paulo - São Paulo";
-  if (lugar == AC) return "Rio Branco - Acre";
-  if (lugar == AL) return "Maceió - Alagoas";
-  if (lugar == AP) return "Macapá - Amapá";
-  if (lugar == AM) return "Manaus - Amazonas";
-  if (lugar == BA) return "Salvador - Bahia";
-  if (lugar == CE) return "Fortaleza - Ceará";
-  if (lugar == ES) return "Vitória - Espírito Santo";
-  if (lugar == GO) return "Goiânia - Goiás";
-  if (lugar == MA) return "São Luís - Maranhão";
-  if (lugar == MT) return "Cuiabá - Mato Grosso";
-  if (lugar == MS) return "Campo Grande - Mato Grosso do Sul";
-  if (lugar == MG) return "Belo Horizonte - Minas Gerais";
-  if (lugar == PA) return "Belém - Pará";
-  if (lugar == PB) return "João Pessoa - Paraíba";
-  if (lugar == PR) return "Curitiba - Paraná";
-  if (lugar == PE) return "Recife - Pernambuco";
-  if (lugar == PI) return "Teresina - Piauí";
-  if (lugar == RJ) return "Rio de Janeiro - Rio de Janeiro";
-  if (lugar == RN) return "Natal - Rio Grande do Norte";
-  if (lugar == RS) return "Porto Alegre - Rio Grande do Sul";
-  if (lugar == RO) return "Porto Velho - Rondônia";
-  if (lugar == RR) return "Boa Vista - Roraima";
-  if (lugar == SC) return "Florianópolis - Santa Catarina";
-  if (lugar == SP) return "São Paulo - São Paulo";
-  if (lugar == SE) return "Aracaju - Sergipe";
-  if (lugar == TO) return "Palmas - Tocantins";
-  if (lugar == DF) return "Brasília - Distrito Federal";
+    if (lugar == TEC) return "Technópolis";
+    if (lugar == SP) return "São Paulo - São Paulo";
+    if (lugar == AC) return "Rio Branco - Acre";
+    if (lugar == AL) return "Maceió - Alagoas";
+    if (lugar == AP) return "Macapá - Amapá";
+    if (lugar == AM) return "Manaus - Amazonas";
+    if (lugar == BA) return "Salvador - Bahia";
+    if (lugar == CE) return "Fortaleza - Ceará";
+    if (lugar == ES) return "Vitória - Espírito Santo";
+    if (lugar == GO) return "Goiânia - Goiás";
+    if (lugar == MA) return "São Luís - Maranhão";
+    if (lugar == MT) return "Cuiabá - Mato Grosso";
+    if (lugar == MS) return "Campo Grande - Mato Grosso do Sul";
+    if (lugar == MG) return "Belo Horizonte - Minas Gerais";
+    if (lugar == PA) return "Belém - Pará";
+    if (lugar == PB) return "João Pessoa - Paraíba";
+    if (lugar == PR) return "Curitiba - Paraná";
+    if (lugar == PE) return "Recife - Pernambuco";
+    if (lugar == PI) return "Teresina - Piauí";
+    if (lugar == RJ) return "Rio de Janeiro - Rio de Janeiro";
+    if (lugar == RN) return "Natal - Rio Grande do Norte";
+    if (lugar == RS) return "Porto Alegre - Rio Grande do Sul";
+    if (lugar == RO) return "Porto Velho - Rondônia";
+    if (lugar == RR) return "Boa Vista - Roraima";
+    if (lugar == SC) return "Florianópolis - Santa Catarina";
+    if (lugar == SP) return "São Paulo - São Paulo";
+    if (lugar == SE) return "Aracaju - Sergipe";
+    if (lugar == TO) return "Palmas - Tocantins";
+    if (lugar == DF) return "Brasília - Distrito Federal";
 }
