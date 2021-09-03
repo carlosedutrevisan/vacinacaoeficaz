@@ -87,7 +87,7 @@ techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 function organizarOrdem(arrayDesor) {
     // nearest neighbour (NN) algorithm
     console.log(arrayDesor);
-    let arrayOrgan = [TEC];
+    let arrayOrgan = [TEC]; // Cria uma array que já tem Technopolis (sempre vai ser o nosso ponto incial)
     let counter = arrayDesor.length;
     for (let i = 0; i < counter; i++) {
         let menorDist, menorDistID;
@@ -103,14 +103,14 @@ function organizarOrdem(arrayDesor) {
                 menorDistID = j;
             }
         }
-        arrayOrgan.push(arrayDesor[menorDistID]);
-        arrayDesor.splice(menorDistID, 1);
+        arrayOrgan.push(arrayDesor[menorDistID]); // Adiciona o ponto mais proximo na array organizada
+        arrayDesor.splice(menorDistID, 1); // Remove o ponto mais proximo na array desorganizada
 
         let coords = [
             arrayOrgan[arrayOrgan.length - 2],
             arrayOrgan[arrayOrgan.length - 1],
         ];
-
+        // Aciona as funções fazerLinha e fazerCard que, adivinhem só, fazem linhas e cards
         fazerLinha(coords[0], coords[1]);
         fazerCard(coords[0], coords[1]);
     }
