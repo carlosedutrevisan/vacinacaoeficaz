@@ -1,89 +1,79 @@
 body {
-  font-family: Arial;
-  color: rgb(238, 238, 238);
-  background-color: rgb(34, 40, 49);
+    font-family: Arial;
+    color: rgb(238, 238, 238);
+    background-color: rgb(34, 40, 49);
 }
 
-
 #map {
-  position: sticky;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    position: sticky;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .mapStyle {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .selete {
-  padding: 20px 100px;
+    padding: 20px 100px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
-  transition: 0.3s;
-  border-radius: 5px;
-  background-color: rgb(57, 62, 70);
-  padding: 10px;
-  margin: 10px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    border-radius: 5px;
+    background-color: rgb(57, 62, 70);
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .cardMapa {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
-  transition: 0.3s;
-  width: 80%;
-  height: 80%;
-  border-radius: 5px;
-  background-color: rgb(57, 62, 70);
-  padding: 10px;
-  margin: auto;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: rgb(57, 62, 70);
+    padding: 10px;
+    margin: auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 img {
-  border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
 }
 
 .container {
-  padding: 2px 16px;
+    padding: 2px 16px;
 }
 
-
-#botaoanimado{
-  width: 160px;
-  height:45px;
-
-  font-size: 28px;
-  border: 0px;
-  border-radius: 3px;
-
-  color: rgba(0, 0, 0, 0.74);
-  background-color: rgba(201, 201, 201, 0.808);
-
-
-  cursor: pointer;
-  transition: 0.6s ease;
+#botaoanimado {
+    width: 160px;
+    height: 45px;
+    font-size: 26px;
+    border: 0px;
+    border-radius: 3px;
+    color: rgb(34, 40, 49);
+    background-color: rgb(128, 237, 153);
+    cursor: pointer;
+    transition: 0.6s ease;
 }
 
-#botaoanimado > #icon{
-  color: rgba(0, 0, 0, 0.74);
-
-
-  animation: is_bouncing 0.5s ease-in alternate infinite;
+#botaoanimado>#icon {
+    color: rgb(34, 40, 49);
+    animation: is_bouncing 0.5s ease-in alternate infinite;
 }
 
-#botaoanimado:hover{
-  background-color:#C4C8D4;
-
+#botaoanimado:hover {
+    background-color: rgb(34, 40, 49);
 }
 
-
-@keyframes is_bouncing{
-  to{
-  transform: translatey(6px);
-  }
+@keyframes is_bouncing {
+    to {
+        transform: translatey(6px);
+    }
 }

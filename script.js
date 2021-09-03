@@ -147,8 +147,8 @@ function fazerCard(origem, destino) {
   cartaDaVez.className = "card";
   cartaDaVez.style = "width: 40%;";
   var origemStrign =
-    "De " + verLugar(origem) + " até " + verLugar(destino);
-  cartaDaVez.innerText = origemStrign;
+    "<p>De " + verLugar(origem) + " até " + verLugar(destino) + "<br /></p>";
+  cartaDaVez.innerHTML = origemStrign;
   divDasCards.append(cartaDaVez);
 }
 
