@@ -69,7 +69,7 @@ img {
 }
 
 #botaoanimado:hover {
-    background-color: rgb(34, 40, 49);
+    background-color: rgb(119, 255, 151);
 }
 
 @keyframes is_bouncing {
