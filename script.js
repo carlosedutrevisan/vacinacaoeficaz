@@ -400,6 +400,174 @@ function pegarEstados() {
         }
     };
 
+    let PRSelect = false;
+    PRSelectID = document.getElementById("PRSelect");
+    PRSelectID.onclick = function() {
+        if (PRSelect == false) PRSelect = true;
+        else PRSelect = false;
+        if (PRSelect) {
+            PRSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(PR);
+        } else {
+            PRSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, PR);
+        }
+    };
+
+    let PESelect = false;
+    PESelectID = document.getElementById("PESelect");
+    PESelectID.onclick = function() {
+        if (PESelect == false) PESelect = true;
+        else PESelect = false;
+        if (PESelect) {
+            PESelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(PE);
+        } else {
+            PESelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, PE);
+        }
+    };
+
+    let PISelect = false;
+    PISelectID = document.getElementById("PISelect");
+    PISelectID.onclick = function() {
+        if (PISelect == false) PISelect = true;
+        else PISelect = false;
+        if (PISelect) {
+            PISelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(PI);
+        } else {
+            PISelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, PI);
+        }
+    };
+
+    let RJSelect = false;
+    RJSelectID = document.getElementById("RJSelect");
+    RJSelectID.onclick = function() {
+        if (RJSelect == false) RJSelect = true;
+        else RJSelect = false;
+        if (RJSelect) {
+            RJSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(RJ);
+        } else {
+            RJSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, RJ);
+        }
+    };
+
+    let RNSelect = false;
+    RNSelectID = document.getElementById("RNSelect");
+    RNSelectID.onclick = function() {
+        if (RNSelect == false) RNSelect = true;
+        else RNSelect = false;
+        if (RNSelect) {
+            RNSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(RN);
+        } else {
+            RNSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, RN);
+        }
+    };
+
+    let RSSelect = false;
+    RSSelectID = document.getElementById("RSSelect");
+    RSSelectID.onclick = function() {
+        if (RSSelect == false) RSSelect = true;
+        else RSSelect = false;
+        if (RSSelect) {
+            RSSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(RS);
+        } else {
+            RSSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, RS);
+        }
+    };
+
+    let ROSelect = false;
+    ROSelectID = document.getElementById("ROSelect");
+    ROSelectID.onclick = function() {
+        if (ROSelect == false) ROSelect = true;
+        else ROSelect = false;
+        if (ROSelect) {
+            ROSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(RO);
+        } else {
+            ROSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, RO);
+        }
+    };
+
+    let RRSelect = false;
+    RRSelectID = document.getElementById("RRSelect");
+    RRSelectID.onclick = function() {
+        if (RRSelect == false) RRSelect = true;
+        else RRSelect = false;
+        if (RRSelect) {
+            RRSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(RR);
+        } else {
+            RRSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, RR);
+        }
+    };
+
+    let SCSelect = false;
+    SCSelectID = document.getElementById("SCSelect");
+    SCSelectID.onclick = function() {
+        if (SCSelect == false) SCSelect = true;
+        else SCSelect = false;
+        if (SCSelect) {
+            SCSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(SC);
+        } else {
+            SCSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, SC);
+        }
+    };
+
+    let SPSelect = false;
+    SPSelectID = document.getElementById("SPSelect");
+    SPSelectID.onclick = function() {
+        if (SPSelect == false) SPSelect = true;
+        else SPSelect = false;
+        if (SPSelect) {
+            SPSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(SP);
+        } else {
+            SPSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, SP);
+        }
+    };
+
+    let SESelect = false;
+    SESelectID = document.getElementById("SESelect");
+    SESelectID.onclick = function() {
+        if (SESelect == false) SESelect = true;
+        else SESelect = false;
+        if (SESelect) {
+            SESelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(SE);
+        } else {
+            SESelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, SE);
+        }
+    };
+
+    let TOSelect = false;
+    TOSelectID = document.getElementById("TOSelect");
+    TOSelectID.onclick = function() {
+        if (TOSelect == false) TOSelect = true;
+        else TOSelect = false;
+        if (TOSelect) {
+            TOSelectID.className = "cardBotaoSimClick";
+            pontosLinhasEstados.push(TO);
+        } else {
+            TOSelectID.className = "cardBotaoNaoClick";
+            removerEstadoDaArray(pontosLinhasEstados, TO);
+        }
+    };
+
 }
 
 document.getElementById("botaoanimado").onclick = function() {
