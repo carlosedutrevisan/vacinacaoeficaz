@@ -1,5 +1,4 @@
 const TEC = L.latLng({ lat: -23.9618, lng: -46.3322 });
-const TEC1 = L.latLng({ lat: -23.9918, lng: -46.3322 });
 const AC = L.latLng({ lat: -8.774923453234832, lng: -70.7924176887652 });
 const AL = L.latLng({ lat: -9.670012731362664, lng: -36.61240787146648 });
 const AP = L.latLng({ lat: 0.041642998897892525, lng: -51.055836918225644 });
@@ -117,7 +116,9 @@ function organizarOrdem(arrayDesor) {
     }
 }
 
+// Essa função faz as linhas no mapa
 function fazerLinha(origem, destino) {
+    // Ela pega a origem e destino (cordenadas) e manda bala (ver docuemntação do leaflet)
     var polyline = L.polyline([origem, destino], {
         color: "rgb(18, 110, 130)",
         weight: 4,
@@ -126,12 +127,13 @@ function fazerLinha(origem, destino) {
     }).addTo(map);
 }
 
+// Essa função faz os cards das origens e destinos dela
 function fazerCard(origem, destino) {
-    const divDasCards = document.getElementById("rotasLista");
-    var cartaDaVez = document.createElement("div");
-    var distanciaDosDoisPontos = origem.distanceTo(destino) / 1000;
-    cartaDaVez.className = "card";
-    cartaDaVez.style = "width: 40%;";
+    const divDasCards = document.getElementById("rotasLista"); // Pega esse div vazio, de baixo do mapa
+    var cartaDaVez = document.createElement("div"); // Cria um novo card para colocar as coisas
+    var distanciaDosDoisPontos = origem.distanceTo(destino) / 1000; // Calcula a distancia, só para colocar no card
+    cartaDaVez.className = "card"; // Coloca o card como classe card, que tá no css
+    cartaDaVez.style = "width: 40%;"; // style do card
     var origemStrign =
         "<p>De " +
         verLugar(origem) +
@@ -140,11 +142,12 @@ function fazerCard(origem, destino) {
         "<br /></p>" +
         "<p>A distância entre esse dois pontos é de " +
         distanciaDosDoisPontos.toFixed(0) +
-        " quilômetros.</p>";
-    cartaDaVez.innerHTML = origemStrign;
-    divDasCards.append(cartaDaVez);
+        " quilômetros.</p>"; // Testinho do card
+    cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
+    divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
 }
 
+// Essa função funciona assim: você dá uma cordenada para ela e ela devolve uma string com a cidade e estado da cordenada
 function verLugar(lugar) {
     if (lugar == TEC) return "Technópolis";
     if (lugar == SP) return "São Paulo - São Paulo";
@@ -177,28 +180,34 @@ function verLugar(lugar) {
     if (lugar == DF) return "Brasília - Distrito Federal";
 }
 
+
+// Essa função remove as cordenadas dos estados de uma array
 function removerEstadoDaArray(arr, estadoApagar) {
     var i = 0;
-    while (i < arr.length) {
+    while (i < arr.length) { // Ele meio que ve todas as vezes que tem o estado na array e tira sempre que tiver
         if (arr[i] === estadoApagar) arr.splice(i, 1);
         else i++;
     }
     return arr;
 }
 
+// Cria o array que vai ter todas as cordenadas selecionadas
 let pontosLinhasEstados = [];
+// Aciona a função de pegar estados que vai *pegar os estados* de todos os botões de estados selecionados
 pegarEstados();
 
+// Função de pegar estados que vê todos os botões do site
 function pegarEstados() {
-    let ACSelect = false;
-    ACSelectID = document.getElementById("ACSelect");
+    // Como é seleção ele pode estar selecionado ou não
+    let ACSelect = false; // Ele vai começar como não selecionado
+    ACSelectID = document.getElementById("ACSelect"); // Se for clicado ele pode selecionar ou deselecionar
     ACSelectID.onclick = function() {
-        if (ACSelect == false) ACSelect = true;
-        else ACSelect = false;
-        if (ACSelect) {
+        if (ACSelect == false) ACSelect = true; // Se ele não tava selecionado ainda, ele seleciona
+        else ACSelect = false; // O inverso
+        if (ACSelect) { // Como ele tá selecionando, ele vai fazer o push da cordenada do estado no array pontosLinhasEstados
             ACSelectID.className = "cardBotaoSimClick";
             pontosLinhasEstados.push(AC);
-        } else {
+        } else { // Como ele tá deselecionando, ele vai tirar as cordenadas do estado da array pela função removerEstadoDaArray
             ACSelectID.className = "cardBotaoNaoClick";
             removerEstadoDaArray(pontosLinhasEstados, AC);
         }
