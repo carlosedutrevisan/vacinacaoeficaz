@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;600;800&display=swap');
+
 body {
-    font-family: Poppins;
     color: rgb(0, 0, 0);
-    background-color: rgb(34, 40, 49);
+    background-color: #11052C;
+    font-family: 'Sora', sans-serif;
 }
 
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container > h1 , .container > h2 {
+    margin: auto;
+    margin-bottom: 16px;
+}
 #map {
     position: sticky;
     top: 0;
@@ -17,10 +37,6 @@ body {
     width: 100%;
 }
 
-.selete {
-    padding: 20px 100px;
-}
-
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
     transition: 0.3s;
@@ -31,30 +47,54 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+.bigDiv {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.insideContainer {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+}
+
 .cardBotaoNaoClick {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
     transition: 0.3s;
     border-radius: 10px;
     border: none;
     background-color: rgb(255, 255, 255);
-    padding: 15px;
     margin: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    height: 50px;
+    max-width: 112px;
+    width: 100%;
+    display: inline-flex;
+    text-align: center;
 }
 
 .cardBotaoSimClick {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
     transition: 0.3s;
     border-radius: 10px;
     border: none;
-    background-color: rgb(128, 237, 153);
-    padding: 15px;
+    background-color: #FFE459;
     margin: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    max-width: 112px;
+    width: 100%;
+    display: inline-flex;
 }
 
+.cardBotaoNaoClick > p, .cardBotaoSimClick > p {
+    margin: auto;
+}
+
+
 .cardMapa {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
     transition: 0.3s;
     width: 80%;
     height: 80%;
@@ -77,22 +117,25 @@ img {
     width: 200px;
     height: 50px;
     font-size: 26px;
-    font-family: Poppins;
     border: 0px;
     border-radius: 10px;
     color: rgb(34, 40, 49);
-    background-color: rgb(128, 237, 153);
+    background-color: #FFE459;
     cursor: pointer;
     transition: 0.6s ease;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    color: #11052C;
 }
 
 #botaoanimado>#icon {
-    color: rgb(34, 40, 49);
+    color: #11052C;
     animation: is_bouncing 0.5s ease-in alternate infinite;
 }
 
 #botaoanimado:hover {
-    background-color: rgb(119, 255, 151);
+    background-color: #fcdd42;
 }
 
 @keyframes is_bouncing {
@@ -100,3 +143,4 @@ img {
         transform: translatey(6px);
     }
 }
+
