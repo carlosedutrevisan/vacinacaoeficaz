@@ -16,7 +16,7 @@ a {
     text-decoration: inherit; 
   }
 
-.inicialPage {
+.inicialPage > .menuContainer{
     height: 100vh;
     display: inline-flex;
     width: 100%;
@@ -50,6 +50,55 @@ nav > ul > li {
 .menuContainer {
     display: inline-flex;
     justify-content: space-between;
+}
+
+.inicialPage>.landingpage{
+
+    height: 90vh;
+    width:100%;
+    position: relative;
+}
+
+.textosmenu_box{
+
+    position: absolute;
+    width: 100vh;
+    height: 80vh;
+    left: 10vh;
+    
+}
+
+.textosmenu{
+    position: relative;
+}
+.textosmenu > #titulo{
+    position: absolute;
+    font-size: 50px;
+    top: 15vh;
+    color: white;
+}
+
+.textosmenu > #apresentacao{
+    position: absolute;
+    top: 32vh;
+    color: white;
+}
+
+#imgbrasil{
+    height: 70vh;
+    width: 70vh;
+    position: absolute;
+    top: 10vh;
+    right: 100px;
+    opacity: 25%;
+}
+
+#imgingecao{
+    height: 50vh;
+    opacity: 25%;
+    position: absolute;
+    right: 200px;
+    top: 30vh;
 }
 
 .contentPrincipal {
