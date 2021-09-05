@@ -4,6 +4,11 @@ body {
     color: rgb(0, 0, 0);
     background-color: #11052C;
     font-family: 'Sora', sans-serif;
+
+    /*degrade no fundo:*/
+    animation:degrade 13s ease alternate infinite;
+    background:linear-gradient(-54deg,#ee7752,#1D3461,#74A57F, #581908) no-repeat;
+    background-size: 275% 275%;
 }
 
 h1 {
@@ -143,4 +148,16 @@ img {
         transform: translatey(6px);
     }
 }
+
+@keyframes degrade {
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
 
