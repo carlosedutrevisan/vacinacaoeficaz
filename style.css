@@ -6,7 +6,7 @@ body {
     font-family: 'Sora', sans-serif;
 
     /*degrade no fundo:*/
-    animation:degrade 13s ease alternate infinite;
+    animation:degrade 30s ease alternate infinite;
     background:linear-gradient(-54deg,#ee7752,#1D3461,#74A57F, #581908) no-repeat;
     background-size: 275% 275%;
 }
