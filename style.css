@@ -11,6 +11,52 @@ body {
     background-size: 275% 275%;
 }
 
+a {
+    color: inherit; 
+    text-decoration: inherit; 
+  }
+
+.inicialPage {
+    height: 100vh;
+    display: inline-flex;
+    width: 100%;
+}
+
+
+
+header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    color: white;
+}
+
+nav > ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+nav > ul > li {
+    margin-left: 35px;
+}
+
+.centerObject {
+    display: inline-flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.menuContainer {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.contentPrincipal {
+    position: relative;
+    display: inline-flex;
+}
+
 h1 {
     font-size: 36px;
 }
@@ -96,6 +142,10 @@ h2 {
 
 .cardBotaoNaoClick > p, .cardBotaoSimClick > p {
     margin: auto;
+}
+
+.cardBotaoNaoClick:hover {
+    background-color: #ffef9f;
 }
 
 
