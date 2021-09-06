@@ -11,12 +11,17 @@ body {
     background-size: 275% 275%;
 }
 
+p {
+    margin: 0px 0px 1px 0px;
+    font-size: clamp(0.7rem, 1vw, 1rem); 
+}
+
 a {
     color: inherit; 
     text-decoration: inherit; 
   }
 
-.inicialPage > .menuContainer{
+.menuContainer{
     height: 100vh;
     display: inline-flex;
     width: 100%;
@@ -52,53 +57,40 @@ nav > ul > li {
     justify-content: space-between;
 }
 
-.inicialPage>.landingpage{
-
+.landingpage {
     height: 90vh;
+    max-width: 1800px;
     width:100%;
     position: relative;
+    display: flex;
+    margin: auto;
 }
 
-.textosmenu_box{
-
-    position: absolute;
-    width: 100vh;
-    height: 80vh;
-    left: 10vh;
-    
-}
 
 .textosmenu{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
 }
-.textosmenu > #titulo{
-    position: absolute;
+
+.titulo{
+    position: relative;
     font-size: 50px;
-    top: 15vh;
+    display: inline-flex;
     color: white;
 }
 
-.textosmenu > #apresentacao{
-    position: absolute;
-    top: 32vh;
+.apresentacao{
+    position: relative;
+    display: inline-flex;
     color: white;
 }
 
 #imgbrasil{
-    height: 70vh;
-    width: 70vh;
-    position: absolute;
-    top: 10vh;
-    right: 100px;
+    display: inline-flex;
     opacity: 25%;
-}
-
-#imgingecao{
-    height: 50vh;
-    opacity: 25%;
-    position: absolute;
-    right: 200px;
-    top: 30vh;
+    position: relative;
 }
 
 .contentPrincipal {
@@ -207,10 +199,6 @@ h2 {
     padding: 10px;
     margin: auto;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-img {
-    border-radius: 10px;
 }
 
 .container {
