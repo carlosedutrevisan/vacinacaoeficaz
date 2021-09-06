@@ -4,11 +4,7 @@ body {
     color: rgb(0, 0, 0);
     background-color: #11052C;
     font-family: 'Sora', sans-serif;
-
-    /*degrade no fundo:*/
-    animation:degrade 30s ease alternate infinite;
-    background:linear-gradient(-54deg,#ee7752,#1D3461,#74A57F, #581908) no-repeat;
-    background-size: 275% 275%;
+    margin: 0;
 }
 
 p {
@@ -27,6 +23,13 @@ a {
     width: 100%;
 }
 
+.inicialPage{
+    /*degrade no fundo:*/
+    animation:degrade 7s ease alternate infinite;
+    background:linear-gradient(-54deg,#2c8516 , #048d6b, #08145a, #74A57F) no-repeat;
+    background-size: 300% 300%;
+    
+}
 
 
 header {
