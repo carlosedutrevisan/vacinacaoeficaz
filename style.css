@@ -25,8 +25,8 @@ a {
 
 .inicialPage{
     /*degrade no fundo:*/
-    animation:degrade 7s ease alternate infinite;
-    background:linear-gradient(-54deg,#2c8516 , #048d6b, #08145a, #74A57F) no-repeat;
+    animation: degrade 30s ease alternate infinite;
+    background: linear-gradient(-54deg,#2c8516 , #048d6b, #105aa0, #000000) no-repeat;
     background-size: 300% 300%;
     
 }
@@ -95,6 +95,39 @@ nav > ul > li {
     opacity: 25%;
     position: relative;
 }
+
+
+.coronainfo{
+    height: 50vh;
+    width:100%;
+    background-color: #e8f1f2;
+    position: relative;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#imgcorona{
+    height: 40vh;
+    width: 40vh;
+}
+
+.textocoronainfo{
+    height: 40vh;
+    width: 70%;
+}
+
+.textocoronainfo > .titulocoronainfo{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 70px;
+    margin: 0px;
+}
+
+.textocoronainfo > .paragrafocoronainfo{
+    font-size: medium;
+}
+
 
 .contentPrincipal {
     position: relative;
