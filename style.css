@@ -75,6 +75,7 @@ nav > ul > li {
     display: flex;
     flex-direction: column;
     max-width: 900px;
+    top: 19vh;
 }
 
 .titulo{
@@ -88,9 +89,12 @@ nav > ul > li {
     position: relative;
     display: inline-flex;
     color: white;
+    font-size: 2.5vh;
 }
 
 #imgbrasil{
+    height: 90vh;
+    width: 90vh;
     display: inline-flex;
     opacity: 25%;
     position: relative;
@@ -125,7 +129,7 @@ nav > ul > li {
 }
 
 .textocoronainfo > .paragrafocoronainfo{
-    font-size: medium;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
 }
 
 
