@@ -79,9 +79,8 @@ nav > ul > li {
     display: flex;
     flex-direction: column;
     max-width: 900px;
-    top: 19vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    top: 20vh;
+    margin-inline: 5vw;
 }
 
 .titulo{
@@ -103,7 +102,8 @@ nav > ul > li {
     width: 90vh;
     display: inline-flex;
     opacity: 25%;
-    position: relative;
+    position: absolute;
+    right: 5vw;
 }
 
 
@@ -136,7 +136,6 @@ nav > ul > li {
 
 .textocoronainfo > .paragrafocoronainfo{
     font-size: clamp(0.7rem, 1vw, 1rem);
-    
 }
 
 .container2{
