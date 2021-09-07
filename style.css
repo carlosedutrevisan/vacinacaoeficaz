@@ -50,9 +50,13 @@ nav > ul > li {
 
 .centerObject {
     display: inline-flex;
-    max-width: 1200px;
+    max-width: 1800px;
     width: 100%;
     margin: auto;
+}
+
+.centerObject > h3{
+    margin-left: 2vw;
 }
 
 .menuContainer {
@@ -76,6 +80,8 @@ nav > ul > li {
     flex-direction: column;
     max-width: 900px;
     top: 19vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 .titulo{
@@ -129,7 +135,8 @@ nav > ul > li {
 }
 
 .textocoronainfo > .paragrafocoronainfo{
-    font-size: clamp(1em, 1em + 1vw, 1.5em);
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    
 }
 
 .container2{
