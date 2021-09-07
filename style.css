@@ -178,8 +178,10 @@ h2 {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     padding: 15px;
-    margin: 10px;
+    margin: auto;
+    margin-top: 16px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .bigDiv {
