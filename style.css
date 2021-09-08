@@ -22,9 +22,12 @@ a {
   }
 
 .menuContainer{
-    height: 100vh;
     display: inline-flex;
     width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    opacity: 0;
+    animation: surgirtexto 1s 1s forwards;
 }
 
 .inicialPage{
@@ -42,31 +45,33 @@ header {
     color: white;
 }
 
+nav {
+    margin-right: 2vw;
+}
+
 nav > ul {
     display: inline-flex;
     list-style: none;
 }
 
 nav > ul > li {
-    margin-left: 35px;
+    margin-left: 32px;
 }
 
 .centerObject {
     display: inline-flex;
+    position: relative;
     max-width: 1800px;
     width: 100%;
     margin: auto;
 }
 
-.centerObject > h3{
-    margin-left: 2vw;
-}
 
-.menuContainer {
-    display: inline-flex;
-    justify-content: space-between;
-    opacity: 0;
-    animation: surgirtexto 1s 1s forwards;
+.titlename2 {
+    margin-left: 2vw;
+    display: none;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .landingpage {

@@ -1,8 +1,14 @@
 @media (max-width: 900px) {
+    .titlename1 {
+        display: none;
+    }
 
-    .landingpage {
+    .titlename2 {
         display: flex;
-        flex-direction: column;
+    }
+
+    nav > ul > li {
+        margin-left: 24px ;
     }
 
     .coronainfo {
