@@ -88,9 +88,9 @@ nav > ul > li {
     display: flex;
     flex-direction: column;
     max-width: 900px;
-    top: 25vh;
     margin-inline: 5vw;
     z-index: 2;
+    margin: auto 5vw 40vh 5vw;
 }
 
 .titulo{
@@ -126,15 +126,15 @@ nav > ul > li {
 
 
 .coronainfo{
-    height: 50vh;
     width:100%;
     background-color: #e8f1f2;
     position: relative;
-    padding-top: 12px;
+    padding: 16px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
+
 
 #imgcorona{
     max-width: 300px;
@@ -143,20 +143,25 @@ nav > ul > li {
 }
 
 .textocoronainfo{
-    max-width: 1200px;
+    max-width: 900px;
     width: 100%;
-    margin: 25px;
+    margin: 0 40px;
 }
 
 .titulocoronainfo{
     font-family: 'M PLUS 1p', sans-serif;
-    margin-left: 5vw;
+    margin: 0px;
 }
+
+
 
 .paragrafocoronainfo{
     font-size: clamp(0.7rem, 1vw, 1rem);
-    margin-left: 5vw;
-    margin-right: 5vw;
+}
+
+.titulocoronainfo, .paragrafocoronainfo, .dip {
+    margin-right: 16px;
+    margin-right: 16px;
 }
 
 .container2{

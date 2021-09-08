@@ -20,4 +20,8 @@
         margin-top: 40px;
     }
 
+    .titulocoronainfo, .paragrafocoronainfo, .dip {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
 }
