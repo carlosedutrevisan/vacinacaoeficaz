@@ -132,7 +132,7 @@ function fazerCard(origem, destino) {
     const divDasCards = document.getElementById("rotasLista"); // Pega esse div vazio, de baixo do mapa
     var cartaDaVez = document.createElement("div"); // Cria um novo card para colocar as coisas
     var distanciaDosDoisPontos = origem.distanceTo(destino) / 1000; // Calcula a distancia, só para colocar no card
-    cartaDaVez.className = "card"; // Coloca o card como classe card, que tá no css
+    cartaDaVez.className = "cardDistan"; // Coloca o card como classe card, que tá no css
     cartaDaVez.style = "width: 40%;"; // style do card
     var origemStrign =
         "<p>De " +
