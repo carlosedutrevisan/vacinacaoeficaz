@@ -207,6 +207,10 @@ nav>ul>li {
     text-align: center;
 }
 
+#sistema {
+    position: auto;
+}
+
 .bigDiv {
     max-width: 1200px;
     display: flex;
