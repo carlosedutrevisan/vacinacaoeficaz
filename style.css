@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;600;800&display=swap");
 body {
     color: rgb(0, 0, 0);
-    background-color: #e8f1f2;
+    background-color: rgb(17, 5, 44);
     font-family: "Sora", sans-serif;
     margin: 0;
 }
@@ -254,10 +254,10 @@ nav>ul>li {
 }
 
 .cardDistan:hover {
-    webkit-transform: scale(1.025, 1.025);
-    -ms-transform: scale(1.025, 1.025);
-    -o-transform: scale(1.025, 1.025);
-    transform: scale(1.025, 1.025);
+    webkit-transform: scale(1.04, 1.04);
+    -ms-transform: scale(1.04, 1.04);
+    -o-transform: scale(1.04, 1.04);
+    transform: scale(1.04, 1.04);
 }
 
 #sistema {
