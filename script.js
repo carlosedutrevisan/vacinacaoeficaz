@@ -270,8 +270,8 @@ let distanciaTotal = 0;
 function fazerCardFinal() {
     const divDasCards = document.getElementById("oCardDoMapa"); // Pega esse div vazio, de baixo do mapa
     var cartaDaVez = document.createElement("div"); // Cria um novo card para colocar as coisas
-    cartaDaVez.className = "cardDistan"; // Coloca o card como classe card, que tá no css
-    cartaDaVez.style = "width: 90%;"; // style do card
+    cartaDaVez.className = "cardFinalDiv"; // Coloca o card como classe card, que tá no css
+    cartaDaVez.style = "cardFinalDiv"; // style do card
     var origemStrign =
         '<p style = "font-size: 18px;">A distância total é de <strong>' + distanciaTotal + ' quilômetros</strong>.</p>'; // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
