@@ -199,6 +199,12 @@ nav>ul>li {
     height: 100%;
     width: 40%;
     float: left;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.direitinha::-webkit-scrollbar {
+    display: none;
 }
 
 .card {
