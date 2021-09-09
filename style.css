@@ -191,8 +191,14 @@ nav>ul>li {
 
 .mapStyle {
     height: 100%;
-    width: 100%;
-    justify-content: center;
+    width: 60%;
+    float: left;
+}
+
+.direitinha {
+    height: 100%;
+    width: 40%;
+    float: left;
 }
 
 .card {
@@ -200,7 +206,7 @@ nav>ul>li {
     transition: 0.3s;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
-    padding: 15px;
+    padding: 32px;
     margin: auto;
     margin-top: 48px;
     margin-bottom: 36px;
@@ -213,12 +219,14 @@ nav>ul>li {
     transition: 0.3s;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
-    padding: 15px;
-    margin: auto;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
+    justify-content: center;
+    border-left: 12px;
 }
 
 #sistema {
@@ -282,11 +290,11 @@ nav>ul>li {
 
 .cardMapa {
     transition: 0.3s;
-    width: 80%;
-    height: 80%;
-    padding: 12px;
+    width: 90%;
+    height: 90%;
+    padding: 16px;
     border-radius: 10px;
-    background-color: rgb(57, 62, 70);
+    background-color: rgb(41, 41, 41);
     margin: auto;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
