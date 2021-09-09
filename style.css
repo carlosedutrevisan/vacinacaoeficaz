@@ -192,6 +192,7 @@ nav>ul>li {
 .mapStyle {
     height: 100%;
     width: 100%;
+    justify-content: center;
 }
 
 .card {
@@ -283,6 +284,7 @@ nav>ul>li {
     transition: 0.3s;
     width: 80%;
     height: 80%;
+    padding: 12px;
     border-radius: 10px;
     background-color: rgb(57, 62, 70);
     margin: auto;
