@@ -84,6 +84,15 @@ var iconePreto = new L.Icon({
 let techMarker = L.marker(TEC, { icon: iconePreto }).addTo(map);
 techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 
+// Adiciona o Marker para as cidades
+var iconeAzul = new L.Icon({
+    iconUrl: "https://images.emojiterra.com/google/android-10/512px/1f535.png",
+    shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+    iconSize: [20, 20],
+    popupAnchor: [0, 0],
+    shadowSize: [20, 20],
+}); // Seta o icone para preto
+
 function organizarOrdem(arrayDesor) {
     // nearest neighbour (NN) algorithm
     //console.log(arrayDesor);
@@ -123,9 +132,9 @@ let linhasarray = [];
 function fazerLinha(origem, destino) {
     // Ela pega a origem e destino (cordenadas) e manda bala (ver docuemntação do leaflet)
     var polyline = L.polyline([origem, destino], {
-        color: "rgb(18, 110, 130)",
+        color: "rgb(46,142,228)",
         weight: 4,
-        opacity: 0.8,
+        opacity: 0.6,
         smoothFactor: 10,
     }).addTo(map);
     linhasarray.push(polyline);
@@ -162,7 +171,7 @@ function fazerCard(origem, destino) {
 
 function fazerMarkers(destinoCoords, destinoNome, distancia) {
     let markerString = '<p>Até aqui foram ' + distancia + ' quilometros.</p>';
-    ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords).addTo(map).bindPopup(markerString);
+    ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords, { icon: iconeAzul }).addTo(map).bindPopup(markerString);
     iDosMarkers++;
     console.log(ArrayDosMarkers);
 }

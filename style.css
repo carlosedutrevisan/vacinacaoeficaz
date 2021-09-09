@@ -226,12 +226,15 @@ nav>ul>li {
     background-color: rgb(255, 255, 255);
     padding: 20px;
     margin-left: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     justify-content: center;
     border-left: 12px;
+    outline: none;
+    border: none;
+    font-family: "Sora";
 }
 
 .cardFinalDiv {
