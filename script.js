@@ -153,7 +153,7 @@ function fazerCard(origem, destino) {
 let distanciaTotal = 0;
 
 function fazerCardFinal() {
-    const divDasCards = document.getElementById("rotasLista"); // Pega esse div vazio, de baixo do mapa
+    const divDasCards = document.getElementById("oCardDoMapa"); // Pega esse div vazio, de baixo do mapa
     var cartaDaVez = document.createElement("div"); // Cria um novo card para colocar as coisas
     cartaDaVez.className = "cardDistan"; // Coloca o card como classe card, que tá no css
     cartaDaVez.style = "width: 90%;"; // style do card

@@ -229,6 +229,11 @@ nav>ul>li {
     border-left: 12px;
 }
 
+.cardFinalDiv {
+    justify-content: center;
+    width: 40%;
+}
+
 #sistema {
     position: auto;
 }
