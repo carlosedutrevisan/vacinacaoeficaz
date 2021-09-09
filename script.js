@@ -86,7 +86,7 @@ techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 
 function organizarOrdem(arrayDesor) {
     // nearest neighbour (NN) algorithm
-    console.log(arrayDesor);
+    //console.log(arrayDesor);
     let arrayOrgan = [TEC]; // Cria uma array que já tem Technopolis (sempre vai ser o nosso ponto incial)
     let counter = arrayDesor.length;
     for (let i = 0; i < counter; i++) {
@@ -117,6 +117,8 @@ function organizarOrdem(arrayDesor) {
     }
 }
 
+
+let linhasarray = [];
 // Essa função faz as linhas no mapa
 function fazerLinha(origem, destino) {
     // Ela pega a origem e destino (cordenadas) e manda bala (ver docuemntação do leaflet)
@@ -126,15 +128,22 @@ function fazerLinha(origem, destino) {
         opacity: 0.8,
         smoothFactor: 10,
     }).addTo(map);
+    linhasarray.push(polyline);
+    //console.log(linhasarray);
 }
 
 // Essa função faz os cards das origens e destinos dela
+let linhasPos = 0;
+let iDosMarkers = 0;
+let ArrayDosMarkers = [];
+
 function fazerCard(origem, destino) {
     const divDasCards = document.getElementById("rotasLista"); // Pega esse div vazio, de baixo do mapa
-    var cartaDaVez = document.createElement("div"); // Cria um novo card para colocar as coisas
+    var cartaDaVez = document.createElement("button"); // Cria um novo card para colocar as coisas
     var distanciaDosDoisPontos = origem.distanceTo(destino) / 1000; // Calcula a distancia, só para colocar no card
     cartaDaVez.className = "cardDistan"; // Coloca o card como classe card, que tá no css
     cartaDaVez.style = "width: 90%;"; // style do card
+    cartaDaVez.id = "cardDestinos" + iDosMarkers;
     var origemStrign =
         '<p style = "font-size: 18px;">' +
         verLugar(origem) +
@@ -148,6 +157,14 @@ function fazerCard(origem, destino) {
     divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
     distanciaTotal += parseInt(distanciaDosDoisPontos.toFixed(0));
     // console.log(distanciaTotal)
+    fazerMarkers(destino, verLugar(destino), distanciaTotal);
+}
+
+function fazerMarkers(destinoCoords, destinoNome, distancia) {
+    let markerString = '<p>Até aqui foram ' + distancia + ' quilometros.</p>';
+    ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords).addTo(map).bindPopup(markerString);
+    iDosMarkers++;
+    console.log(ArrayDosMarkers);
 }
 
 let distanciaTotal = 0;
@@ -161,6 +178,11 @@ function fazerCardFinal() {
         '<p style = "font-size: 18px;">A distância total é de <strong>' + distanciaTotal + ' quilômetros</strong>.</p>'; // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
     divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
+    for (let i = 0; i < iDosMarkers; i++) {
+        document.getElementById("cardDestinos" + i).onclick = function() {
+            ArrayDosMarkers[i].openPopup();
+        };
+    }
 }
 
 // Essa função funciona assim: você dá uma cordenada para ela e ela devolve uma string com a cidade e estado da cordenada
