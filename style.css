@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;600;800&display=swap');
-
 body {
     color: rgb(0, 0, 0);
     background-color: #11052C;
@@ -9,19 +8,20 @@ body {
 
 p {
     margin: 0px 0px 1px 0px;
-    font-size: clamp(0.7rem, 1vw, 1rem); 
+    font-size: clamp(0.7rem, 1vw, 1rem);
 }
 
 h1 {
-    font-size: clamp(1em, 1em + 3vw, 2.5em); /* texto responsivo */
+    font-size: clamp(1em, 1em + 3vw, 2.5em);
+    /* texto responsivo */
 }
 
 a {
-    color: inherit; 
-    text-decoration: inherit; 
-  }
+    color: inherit;
+    text-decoration: inherit;
+}
 
-.menuContainer{
+.menuContainer {
     display: inline-flex;
     width: 100%;
     display: inline-flex;
@@ -30,12 +30,11 @@ a {
     animation: surgirtexto 1s 1s forwards;
 }
 
-.inicialPage{
+.inicialPage {
     /*degrade no fundo:*/
     animation: degrade 30s ease alternate infinite;
-    background: linear-gradient(-54deg,#2c8516 , #048d6b, #105aa0, #000000) no-repeat;
+    background: linear-gradient(-54deg, #2c8516, #048d6b, #105aa0, #000000) no-repeat;
     background-size: 300% 300%;
-    
 }
 
 header {
@@ -49,12 +48,12 @@ nav {
     margin-right: 2vw;
 }
 
-nav > ul {
+nav>ul {
     display: inline-flex;
     list-style: none;
 }
 
-nav > ul > li {
+nav>ul>li {
     margin-left: 32px;
 }
 
@@ -66,7 +65,6 @@ nav > ul > li {
     margin: auto;
 }
 
-
 .titlename2 {
     margin-left: 2vw;
     display: none;
@@ -77,13 +75,13 @@ nav > ul > li {
 .landingpage {
     height: 90vh;
     max-width: 1800px;
-    width:100%;
+    width: 100%;
     position: relative;
     display: flex;
     margin: auto;
 }
 
-.textosmenu{
+.textosmenu {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -93,18 +91,17 @@ nav > ul > li {
     margin: auto 5vw 40vh 5vw;
 }
 
-.titulo{
+.titulo {
     position: relative;
     font-size: 50px;
     display: inline-flex;
     color: white;
-    margin:0;
-
+    margin: 0;
     animation: surgirtexto 1ms 0.4s forwards;
     opacity: 0;
 }
 
-.apresentacao{
+.apresentacao {
     position: relative;
     display: inline-flex;
     color: white;
@@ -114,7 +111,7 @@ nav > ul > li {
     animation: surgirtexto 1s 1s forwards;
 }
 
-#imgbrasil{
+#imgbrasil {
     height: 90vh;
     width: 90vh;
     display: inline-flex;
@@ -124,9 +121,8 @@ nav > ul > li {
     z-index: 1;
 }
 
-
-.coronainfo{
-    width:100%;
+.coronainfo {
+    width: 100%;
     background-color: #e8f1f2;
     position: relative;
     padding: 16px 0;
@@ -135,36 +131,35 @@ nav > ul > li {
     align-items: center;
 }
 
-
-#imgcorona{
+#imgcorona {
     max-width: 300px;
     max-height: 300px;
     height: 100%;
 }
 
-.textocoronainfo{
+.textocoronainfo {
     max-width: 900px;
     width: 100%;
     margin: 0 40px;
 }
 
-.titulocoronainfo{
+.titulocoronainfo {
     font-family: 'M PLUS 1p', sans-serif;
     margin: 0px;
 }
 
-
-
-.paragrafocoronainfo{
+.paragrafocoronainfo {
     font-size: clamp(0.7rem, 1vw, 1rem);
 }
 
-.titulocoronainfo, .paragrafocoronainfo, .dip {
+.titulocoronainfo,
+.paragrafocoronainfo,
+.dip {
     margin-right: 16px;
     margin-right: 16px;
 }
 
-.container2{
+.container2 {
     margin-bottom: 100px;
 }
 
@@ -179,10 +174,12 @@ nav > ul > li {
     flex-direction: column;
 }
 
-.container > h1 , .container > h2 {
+.container>h1,
+.container>h2 {
     margin: auto;
     margin-bottom: 16px;
 }
+
 #map {
     position: sticky;
     top: 0;
@@ -239,25 +236,27 @@ nav > ul > li {
 }
 
 .cardBotaoSimClick {
+    background-color: #FFE459;
     transition: 0.3s;
     border-radius: 10px;
     border: none;
-    background-color: #FFE459;
     margin: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    height: 50px;
     max-width: 112px;
     width: 100%;
     display: inline-flex;
+    text-align: center;
 }
 
-.cardBotaoNaoClick > p, .cardBotaoSimClick > p {
+.cardBotaoNaoClick>p,
+.cardBotaoSimClick>p {
     margin: auto;
 }
 
 .cardBotaoNaoClick:hover {
     background-color: #ffef9f;
 }
-
 
 .cardMapa {
     transition: 0.3s;
@@ -305,21 +304,18 @@ nav > ul > li {
 }
 
 @keyframes degrade {
-    0%{
-      background-position: 0 50%;
+    0% {
+        background-position: 0 50%;
     }
-    50%{
-      background-position: 100% 50%;
+    50% {
+        background-position: 100% 50%;
     }
-    100%{
-      background-position: 0 50%;
+    100% {
+        background-position: 0 50%;
     }
 }
 
-
-
-
-.textreveal{
+.textreveal {
     overflow: hidden;
     position: relative;
 }
@@ -336,18 +332,17 @@ nav > ul > li {
     right: 0;
 }
 
-@keyframes revelation{
-    0%{
-      transform: translatex(-101%);
+@keyframes revelation {
+    0% {
+        transform: translatex(-101%);
     }
-    100%{
-      transform: translatex(101%);
-    }
-}
-  
-@keyframes surgirtexto{
-    to{
-      opacity: 1;
+    100% {
+        transform: translatex(101%);
     }
 }
 
+@keyframes surgirtexto {
+    to {
+        opacity: 1;
+    }
+}
