@@ -113,6 +113,7 @@ function organizarOrdem(arrayDesor) {
         // Aciona as funções fazerLinha e fazerCard que, adivinhem só, fazem linhas e cards
         fazerLinha(coords[0], coords[1]);
         fazerCard(coords[0], coords[1]);
+        if (arrayDesor == 0) fazerCardFinal();
     }
 }
 
@@ -135,14 +136,29 @@ function fazerCard(origem, destino) {
     cartaDaVez.className = "cardDistan"; // Coloca o card como classe card, que tá no css
     cartaDaVez.style = "width: 40%;"; // style do card
     var origemStrign =
-        "<p>De " +
+        '<p style = "font-size: 18px;">' +
         verLugar(origem) +
         " até " +
         verLugar(destino) +
         "<br /></p>" +
-        "<p>A distância entre esse dois pontos é de " +
+        '<p style = "font-size: 18px;">A distância entre esse dois pontos é de ' +
         distanciaDosDoisPontos.toFixed(0) +
         " quilômetros.</p>"; // Testinho do card
+    cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
+    divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
+    distanciaTotal += parseInt(distanciaDosDoisPontos.toFixed(0));
+    // console.log(distanciaTotal)
+}
+
+let distanciaTotal = 0;
+
+function fazerCardFinal() {
+    const divDasCards = document.getElementById("rotasLista"); // Pega esse div vazio, de baixo do mapa
+    var cartaDaVez = document.createElement("div"); // Cria um novo card para colocar as coisas
+    cartaDaVez.className = "cardDistan"; // Coloca o card como classe card, que tá no css
+    cartaDaVez.style = "width: 40%;"; // style do card
+    var origemStrign =
+        '<p style = "font-size: 18px;">A distância total é de <strong>' + distanciaTotal + ' quilômetros</strong>.</p>'; // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
     divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
 }
