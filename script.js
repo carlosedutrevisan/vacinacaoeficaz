@@ -1,31 +1,116 @@
-const TEC = L.latLng({ lat: -23.9618, lng: -46.3322 });
-const AC = L.latLng({ lat: -8.774923453234832, lng: -70.7924176887652 });
-const AL = L.latLng({ lat: -9.670012731362664, lng: -36.61240787146648 });
-const AP = L.latLng({ lat: 0.041642998897892525, lng: -51.055836918225644 });
-const AM = L.latLng({ lat: -3.0802121245764984, lng: -60.032562581423356 });
-const BA = L.latLng({ lat: -12.977575946740012, lng: -38.50196897959748 });
-const CE = L.latLng({ lat: -3.728212294433311, lng: -38.525117309581205 });
-const ES = L.latLng({ lat: -20.27863519798479, lng: -40.292915546998934 });
-const GO = L.latLng({ lat: -16.685647532204754, lng: -49.26616338770563 });
-const MA = L.latLng({ lat: -2.5313031893117364, lng: -44.29520115699613 });
-const MT = L.latLng({ lat: -15.59305374235488, lng: -56.107300612569745 });
-const MS = L.latLng({ lat: -20.477827428370965, lng: -54.61494299514637 });
-const MG = L.latLng({ lat: -19.90987764455913, lng: -43.93814666397501 });
-const PA = L.latLng({ lat: -1.4578061219139558, lng: -48.503625350164214 });
-const PB = L.latLng({ lat: -7.120168680307714, lng: -34.88110963204021 });
-const PR = L.latLng({ lat: -25.43801663226879, lng: -49.27058010993872 });
-const PE = L.latLng({ lat: -8.059826650209363, lng: -34.8863593088734 });
-const PI = L.latLng({ lat: -5.094408389062396, lng: -42.80082518788616 });
-const RJ = L.latLng({ lat: -22.90743315129049, lng: -43.174347366545625 });
-const RN = L.latLng({ lat: -5.783071221978675, lng: -35.20081945185408 });
-const RS = L.latLng({ lat: -30.039867784821368, lng: -51.20392875164791 });
-const RO = L.latLng({ lat: -8.740384737276411, lng: -63.845651329994865 });
-const RR = L.latLng({ lat: 2.8195137628013964, lng: -60.71131961246784 });
-const SC = L.latLng({ lat: -27.59169568182629, lng: -48.534505282003984 });
-const SP = L.latLng({ lat: -23.5253466704275, lng: -46.653260364514196 });
-const SE = L.latLng({ lat: -10.926937202132311, lng: -37.065818770249415 });
-const TO = L.latLng({ lat: -10.250592736260634, lng: -48.32526386846129 });
-const DF = L.latLng({ lat: -15.75467391238458, lng: -47.89675639486514 });
+const TEC = L.latLng({
+    lat: -23.9618,
+    lng: -46.3322
+});
+const AC = L.latLng({
+    lat: -8.774923453234832,
+    lng: -70.7924176887652
+});
+const AL = L.latLng({
+    lat: -9.670012731362664,
+    lng: -36.61240787146648
+});
+const AP = L.latLng({
+    lat: 0.041642998897892525,
+    lng: -51.055836918225644
+});
+const AM = L.latLng({
+    lat: -3.0802121245764984,
+    lng: -60.032562581423356
+});
+const BA = L.latLng({
+    lat: -12.977575946740012,
+    lng: -38.50196897959748
+});
+const CE = L.latLng({
+    lat: -3.728212294433311,
+    lng: -38.525117309581205
+});
+const ES = L.latLng({
+    lat: -20.27863519798479,
+    lng: -40.292915546998934
+});
+const GO = L.latLng({
+    lat: -16.685647532204754,
+    lng: -49.26616338770563
+});
+const MA = L.latLng({
+    lat: -2.5313031893117364,
+    lng: -44.29520115699613
+});
+const MT = L.latLng({
+    lat: -15.59305374235488,
+    lng: -56.107300612569745
+});
+const MS = L.latLng({
+    lat: -20.477827428370965,
+    lng: -54.61494299514637
+});
+const MG = L.latLng({
+    lat: -19.90987764455913,
+    lng: -43.93814666397501
+});
+const PA = L.latLng({
+    lat: -1.4578061219139558,
+    lng: -48.503625350164214
+});
+const PB = L.latLng({
+    lat: -7.120168680307714,
+    lng: -34.88110963204021
+});
+const PR = L.latLng({
+    lat: -25.43801663226879,
+    lng: -49.27058010993872
+});
+const PE = L.latLng({
+    lat: -8.059826650209363,
+    lng: -34.8863593088734
+});
+const PI = L.latLng({
+    lat: -5.094408389062396,
+    lng: -42.80082518788616
+});
+const RJ = L.latLng({
+    lat: -22.90743315129049,
+    lng: -43.174347366545625
+});
+const RN = L.latLng({
+    lat: -5.783071221978675,
+    lng: -35.20081945185408
+});
+const RS = L.latLng({
+    lat: -30.039867784821368,
+    lng: -51.20392875164791
+});
+const RO = L.latLng({
+    lat: -8.740384737276411,
+    lng: -63.845651329994865
+});
+const RR = L.latLng({
+    lat: 2.8195137628013964,
+    lng: -60.71131961246784
+});
+const SC = L.latLng({
+    lat: -27.59169568182629,
+    lng: -48.534505282003984
+});
+const SP = L.latLng({
+    lat: -23.5253466704275,
+    lng: -46.653260364514196
+});
+const SE = L.latLng({
+    lat: -10.926937202132311,
+    lng: -37.065818770249415
+});
+const TO = L.latLng({
+    lat: -10.250592736260634,
+    lng: -48.32526386846129
+});
+const DF = L.latLng({
+    lat: -15.75467391238458,
+    lng: -47.89675639486514
+});
+var i = 1;
 
 function pegarCoords(estados) {
     let coordsPontos = [];
@@ -81,7 +166,9 @@ var iconePreto = new L.Icon({
     popupAnchor: [1, -34],
     shadowSize: [41, 41],
 }); // Seta o icone para preto
-let techMarker = L.marker(TEC, { icon: iconePreto }).addTo(map);
+let techMarker = L.marker(TEC, {
+    icon: iconePreto
+}).addTo(map);
 techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
 
 // Adiciona o Marker para as cidades
@@ -171,7 +258,9 @@ function fazerCard(origem, destino) {
 
 function fazerMarkers(destinoCoords, destinoNome, distancia) {
     let markerString = '<p>Até aqui foram ' + distancia + ' quilometros.</p>';
-    ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords, { icon: iconeAzul }).addTo(map).bindPopup(markerString);
+    ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords, {
+        icon: iconeAzul
+    }).addTo(map).bindPopup(markerString);
     iDosMarkers++;
     console.log(ArrayDosMarkers);
 }
@@ -241,391 +330,128 @@ function removerEstadoDaArray(arr, estadoApagar) {
 // Cria o array que vai ter todas as cordenadas selecionadas
 let pontosLinhasEstados = [];
 // Aciona a função de pegar estados que vai *pegar os estados* de todos os botões de estados selecionados
-pegarEstados();
 
-// Função de pegar estados que vê todos os botões do site
+
 function pegarEstados() {
-    // Como é seleção ele pode estar selecionado ou não
-    let ACSelect = false; // Ele vai começar como não selecionado
-    ACSelectID = document.getElementById("ACSelect"); // Se for clicado ele pode selecionar ou deselecionar
-    ACSelectID.onclick = function() {
-        if (ACSelect == false) ACSelect = true; // Se ele não tava selecionado ainda, ele seleciona
-        else ACSelect = false; // O inverso
-        if (ACSelect) { // Como ele tá selecionando, ele vai fazer o push da cordenada do estado no array pontosLinhasEstados
-            ACSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(AC);
-        } else { // Como ele tá deselecionando, ele vai tirar as cordenadas do estado da array pela função removerEstadoDaArray
-            ACSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, AC);
-        }
-    };
+    var lista_estados = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RR", "RO", "RJ", "RN", "RS", "SC", "SP", "SE", "TEC", "TO"];
 
-    let ALSelect = false;
-    ALSelectID = document.getElementById("ALSelect");
-    ALSelectID.onclick = function() {
-        if (ALSelect == false) ALSelect = true;
-        else ALSelect = false;
-        if (ALSelect) {
-            ALSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(AL);
-        } else {
-            ALSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, AL);
-        }
-    };
+    for (var j = 0; j <= i - 1; j++) {
 
-    let APSelect = false;
-    APSelectID = document.getElementById("APSelect");
-    APSelectID.onclick = function() {
-        if (APSelect == false) APSelect = true;
-        else APSelect = false;
-        if (APSelect) {
-            APSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(AP);
-        } else {
-            APSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, AP);
+        var identidade2 = "sel" + j;
+        console.log(identidade2);
+        var valor = document.getElementById(identidade2).value;
+        console.log(valor);
+        switch (valor) {
+            case 'AC':
+                pontosLinhasEstados.push(AC);
+                break;
+            case 'AL':
+                pontosLinhasEstados.push(AL);
+                break;
+            case 'AM':
+                pontosLinhasEstados.push(AM);
+                break;
+            case 'AP':
+                pontosLinhasEstados.push(AP);
+                break;
+            case 'BA':
+                pontosLinhasEstados.push(BA);
+                break;
+            case 'CE':
+                pontosLinhasEstados.push(CE);
+                break;
+            case 'ES':
+                pontosLinhasEstados.push(ES);
+                break;
+            case 'GO':
+                pontosLinhasEstados.push(GO);
+                break;
+            case 'MA':
+                pontosLinhasEstados.push(MA);
+                break;
+            case 'MT':
+                pontosLinhasEstados.push(MT);
+                break;
+            case 'MS':
+                pontosLinhasEstados.push(MS);
+                break;
+            case 'MG':
+                pontosLinhasEstados.push(MG);
+                break;
+            case 'PA':
+                pontosLinhasEstados.push(PA);
+                break;
+            case 'PB':
+                pontosLinhasEstados.push(PB);
+                break;
+            case 'PR':
+                pontosLinhasEstados.push(PR);
+                break;
+            case 'PE':
+                pontosLinhasEstados.push(PE);
+                break;
+            case 'PI':
+                pontosLinhasEstados.push(PI);
+                break;
+            case 'RJ':
+                pontosLinhasEstados.push(RJ);
+                break;
+            case 'RN':
+                pontosLinhasEstados.push(RN);
+                break;
+            case 'RS':
+                pontosLinhasEstados.push(RS);
+                break;
+            case 'RO':
+                pontosLinhasEstados.push(RO);
+                break;
+            case 'RR':
+                pontosLinhasEstados.push(RR);
+                break;
+            case 'SC':
+                pontosLinhasEstados.push(SC);
+                break;
+            case 'SP':
+                pontosLinhasEstados.push(SP);
+                break;
+            case 'SE':
+                pontosLinhasEstados.push(SE);
+                break;
+            case 'TO':
+                pontosLinhasEstados.push(TO);
+                break;
+            case 'DF':
+                pontosLinhasEstados.push(DF);
+                break;
+            case 'TEC':
+                pontosLinhasEstados.push(TEC);
+                break;
+            default:
+                break;
         }
-    };
-
-    let AMSelect = false;
-    AMSelectID = document.getElementById("AMSelect");
-    AMSelectID.onclick = function() {
-        if (AMSelect == false) AMSelect = true;
-        else AMSelect = false;
-        if (AMSelect) {
-            AMSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(AM);
-        } else {
-            AMSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, AM);
-        }
-    };
-
-    let BASelect = false;
-    BASelectID = document.getElementById("BASelect");
-    BASelectID.onclick = function() {
-        if (BASelect == false) BASelect = true;
-        else BASelect = false;
-        if (BASelect) {
-            BASelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(BA);
-        } else {
-            BASelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, BA);
-        }
-    };
-
-    let CESelect = false;
-    CESelectID = document.getElementById("CESelect");
-    CESelectID.onclick = function() {
-        if (CESelect == false) CESelect = true;
-        else CESelect = false;
-        if (CESelect) {
-            CESelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(CE);
-        } else {
-            CESelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, CE);
-        }
-    };
-
-    let DFSelect = false;
-    DFSelectID = document.getElementById("DFSelect");
-    DFSelectID.onclick = function() {
-        if (DFSelect == false) DFSelect = true;
-        else DFSelect = false;
-        if (DFSelect) {
-            DFSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(DF);
-        } else {
-            DFSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, DF);
-        }
-    };
-
-    let ESSelect = false;
-    ESSelectID = document.getElementById("ESSelect");
-    ESSelectID.onclick = function() {
-        if (ESSelect == false) ESSelect = true;
-        else ESSelect = false;
-        if (ESSelect) {
-            ESSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(ES);
-        } else {
-            ESSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, ES);
-        }
-    };
-
-    let GOSelect = false;
-    GOSelectID = document.getElementById("GOSelect");
-    GOSelectID.onclick = function() {
-        if (GOSelect == false) GOSelect = true;
-        else GOSelect = false;
-        if (GOSelect) {
-            GOSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(GO);
-        } else {
-            GOSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, GO);
-        }
-    };
-
-    let MASelect = false;
-    MASelectID = document.getElementById("MASelect");
-    MASelectID.onclick = function() {
-        if (MASelect == false) MASelect = true;
-        else MASelect = false;
-        if (MASelect) {
-            MASelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(MA);
-        } else {
-            MASelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, MA);
-        }
-    };
-
-    let MTSelect = false;
-    MTSelectID = document.getElementById("MTSelect");
-    MTSelectID.onclick = function() {
-        if (MTSelect == false) MTSelect = true;
-        else MTSelect = false;
-        if (MTSelect) {
-            MTSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(MT);
-        } else {
-            MTSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, MT);
-        }
-    };
-
-    let MSSelect = false;
-    MSSelectID = document.getElementById("MSSelect");
-    MSSelectID.onclick = function() {
-        if (MSSelect == false) MSSelect = true;
-        else MSSelect = false;
-        if (MSSelect) {
-            MSSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(MS);
-        } else {
-            MSSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, MS);
-        }
-    };
-
-    let MGSelect = false;
-    MGSelectID = document.getElementById("MGSelect");
-    MGSelectID.onclick = function() {
-        if (MGSelect == false) MGSelect = true;
-        else MGSelect = false;
-        if (MGSelect) {
-            MGSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(MG);
-        } else {
-            MGSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, MG);
-        }
-    };
-
-    let PASelect = false;
-    PASelectID = document.getElementById("PASelect");
-    PASelectID.onclick = function() {
-        if (PASelect == false) PASelect = true;
-        else PASelect = false;
-        if (PASelect) {
-            PASelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(PA);
-        } else {
-            PASelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, PA);
-        }
-    };
-
-    let PBSelect = false;
-    PBSelectID = document.getElementById("PBSelect");
-    PBSelectID.onclick = function() {
-        if (PBSelect == false) PBSelect = true;
-        else PBSelect = false;
-        if (PBSelect) {
-            PBSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(PB);
-        } else {
-            PBSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, PB);
-        }
-    };
-
-    let PRSelect = false;
-    PRSelectID = document.getElementById("PRSelect");
-    PRSelectID.onclick = function() {
-        if (PRSelect == false) PRSelect = true;
-        else PRSelect = false;
-        if (PRSelect) {
-            PRSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(PR);
-        } else {
-            PRSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, PR);
-        }
-    };
-
-    let PESelect = false;
-    PESelectID = document.getElementById("PESelect");
-    PESelectID.onclick = function() {
-        if (PESelect == false) PESelect = true;
-        else PESelect = false;
-        if (PESelect) {
-            PESelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(PE);
-        } else {
-            PESelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, PE);
-        }
-    };
-
-    let PISelect = false;
-    PISelectID = document.getElementById("PISelect");
-    PISelectID.onclick = function() {
-        if (PISelect == false) PISelect = true;
-        else PISelect = false;
-        if (PISelect) {
-            PISelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(PI);
-        } else {
-            PISelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, PI);
-        }
-    };
-
-    let RJSelect = false;
-    RJSelectID = document.getElementById("RJSelect");
-    RJSelectID.onclick = function() {
-        if (RJSelect == false) RJSelect = true;
-        else RJSelect = false;
-        if (RJSelect) {
-            RJSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(RJ);
-        } else {
-            RJSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, RJ);
-        }
-    };
-
-    let RNSelect = false;
-    RNSelectID = document.getElementById("RNSelect");
-    RNSelectID.onclick = function() {
-        if (RNSelect == false) RNSelect = true;
-        else RNSelect = false;
-        if (RNSelect) {
-            RNSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(RN);
-        } else {
-            RNSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, RN);
-        }
-    };
-
-    let RSSelect = false;
-    RSSelectID = document.getElementById("RSSelect");
-    RSSelectID.onclick = function() {
-        if (RSSelect == false) RSSelect = true;
-        else RSSelect = false;
-        if (RSSelect) {
-            RSSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(RS);
-        } else {
-            RSSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, RS);
-        }
-    };
-
-    let ROSelect = false;
-    ROSelectID = document.getElementById("ROSelect");
-    ROSelectID.onclick = function() {
-        if (ROSelect == false) ROSelect = true;
-        else ROSelect = false;
-        if (ROSelect) {
-            ROSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(RO);
-        } else {
-            ROSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, RO);
-        }
-    };
-
-    let RRSelect = false;
-    RRSelectID = document.getElementById("RRSelect");
-    RRSelectID.onclick = function() {
-        if (RRSelect == false) RRSelect = true;
-        else RRSelect = false;
-        if (RRSelect) {
-            RRSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(RR);
-        } else {
-            RRSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, RR);
-        }
-    };
-
-    let SCSelect = false;
-    SCSelectID = document.getElementById("SCSelect");
-    SCSelectID.onclick = function() {
-        if (SCSelect == false) SCSelect = true;
-        else SCSelect = false;
-        if (SCSelect) {
-            SCSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(SC);
-        } else {
-            SCSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, SC);
-        }
-    };
-
-    let SPSelect = false;
-    SPSelectID = document.getElementById("SPSelect");
-    SPSelectID.onclick = function() {
-        if (SPSelect == false) SPSelect = true;
-        else SPSelect = false;
-        if (SPSelect) {
-            SPSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(SP);
-        } else {
-            SPSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, SP);
-        }
-    };
-
-    let SESelect = false;
-    SESelectID = document.getElementById("SESelect");
-    SESelectID.onclick = function() {
-        if (SESelect == false) SESelect = true;
-        else SESelect = false;
-        if (SESelect) {
-            SESelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(SE);
-        } else {
-            SESelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, SE);
-        }
-    };
-
-    let TOSelect = false;
-    TOSelectID = document.getElementById("TOSelect");
-    TOSelectID.onclick = function() {
-        if (TOSelect == false) TOSelect = true;
-        else TOSelect = false;
-        if (TOSelect) {
-            TOSelectID.className = "cardBotaoSimClick";
-            pontosLinhasEstados.push(TO);
-        } else {
-            TOSelectID.className = "cardBotaoNaoClick";
-            removerEstadoDaArray(pontosLinhasEstados, TO);
-        }
-    };
+    }
+    console.log(pontosLinhasEstados);
+    organizarOrdem(pontosLinhasEstados);
 
 }
 
-document.getElementById("botaoanimado").onclick = function() {
-    organizarOrdem(pontosLinhasEstados);
-};
+function adicionar() {
+    if (i <= 27) {
+        var newsel = document.createElement("select");
+        var identidade = "sel" + i;
+        document.getElementById("insideContainer").appendChild(newsel);
+        newsel.setAttribute('id', identidade);
+        newsel.setAttribute('class', 'seletores');
+
+        var lista_estados = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RR", "RO", "RJ", "RN", "RS", "SC", "SP", "SE", "TEC", "TO"];
+
+        for (var n = 0; n < lista_estados.length; n++) {
+            var option = document.createElement("option");
+            option.value = lista_estados[n];
+            option.text = lista_estados[n];
+            newsel.appendChild(option);
+        }
+
+        i++;
+    }
+}
