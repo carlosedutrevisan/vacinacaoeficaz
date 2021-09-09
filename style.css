@@ -125,15 +125,16 @@ nav>ul>li {
     width: 100%;
     background-color: #e8f1f2;
     position: relative;
-    padding: 16px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 #imgcorona {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     height: 100%;
 }
 
@@ -200,7 +201,8 @@ nav>ul>li {
     background-color: rgb(255, 255, 255);
     padding: 15px;
     margin: auto;
-    margin-top: 16px;
+    margin-top: 48px;
+    margin-bottom: 36px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
 }
@@ -285,8 +287,8 @@ nav>ul>li {
     cursor: pointer;
     transition: 0.6s ease;
     margin: auto;
-    margin-top: 15px;
-    margin-bottom: 25px;
+    margin-top: 36px;
+    margin-bottom: 36px;
     color: #11052c;
 }
 
