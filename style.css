@@ -213,7 +213,6 @@ nav>ul>li {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     padding: 32px;
-    margin: auto;
     margin-top: 48px;
     margin-bottom: 36px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -226,7 +225,7 @@ nav>ul>li {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     padding: 20px;
-    margin-left: 20px;
+    margin-left: 22px;
     margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
