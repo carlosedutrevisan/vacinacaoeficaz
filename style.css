@@ -260,9 +260,7 @@ nav>ul>li {
     transform: scale(1.04, 1.04);
 }
 
-#sistema {
-    position: auto;
-}
+
 
 .bigDiv {
     max-width: 1200px;
@@ -394,6 +392,30 @@ nav>ul>li {
     left: 0;
     right: 0;
 }
+
+.equipe {
+    width: 100%;
+    background-color: rgb(190, 145, 145);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.leagueoflegends {
+    background-color: green;
+    max-width: 350px;
+    width: 100%;
+    height: 350px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
 
 @keyframes revelation {
     0% {
