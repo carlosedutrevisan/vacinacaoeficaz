@@ -455,3 +455,10 @@ function adicionar() {
         i++;
     }
 }
+
+function remover(){
+    if(i>1){
+        document.getElementById("sel"+(i-1)).remove();
+       i--; 
+    }
+}
