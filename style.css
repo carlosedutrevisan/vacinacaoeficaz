@@ -211,6 +211,9 @@ nav>ul>li {
 
 .material-new {
     font-size: clamp(1em, 1em + 3vw, 2.5em) !important;
+    max-width: 40px;
+    width: 100%;
+    margin: auto;
 }
 
 .textocardsinfo {
@@ -219,7 +222,6 @@ nav>ul>li {
 }
 
 .paragrafosistemainfo{
-    position: absolute;
     margin: 10px;
     bottom: 5px;
     color:#1b1b1b;
