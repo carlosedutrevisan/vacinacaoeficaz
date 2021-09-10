@@ -146,8 +146,9 @@ function pegarCoords(estados) {
 }
 
 // Criação do mapa setando para o Brasil em um zoom que pega tudo
+
 var map = L.map("map").setView([-15, -55], 5);
-L.tileLayer(
+let layerDoMapa = L.tileLayer(
     "https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=hKsUwUx2YBOu2Scruilx", {
         tileSize: 512,
         zoomOffset: -1,
@@ -279,6 +280,7 @@ function fazerCardFinal() {
     for (let i = 0; i < iDosMarkers; i++) {
         document.getElementById("cardDestinos" + i).onclick = function() {
             ArrayDosMarkers[i].openPopup();
+            map.setView(ArrayDosMarkers[i]._latlng, 6);
         };
     }
 }
@@ -331,8 +333,8 @@ function removerEstadoDaArray(arr, estadoApagar) {
 let pontosLinhasEstados = [];
 // Aciona a função de pegar estados que vai *pegar os estados* de todos os botões de estados selecionados
 
-
 function pegarEstados() {
+    //map.clearLayers();
     var lista_estados = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RR", "RO", "RJ", "RN", "RS", "SC", "SP", "SE", "TEC", "TO"];
 
     for (var j = 0; j <= i - 1; j++) {
@@ -436,6 +438,7 @@ function pegarEstados() {
 }
 
 function adicionar() {
+
     if (i <= 27) {
         var newsel = document.createElement("select");
         var identidade = "sel" + i;
@@ -443,7 +446,7 @@ function adicionar() {
         newsel.setAttribute('id', identidade);
         newsel.setAttribute('class', 'seletores');
 
-        var lista_estados = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RR", "RO", "RJ", "RN", "RS", "SC", "SP", "SE", "TEC", "TO"];
+        var lista_estados = ["-","AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RR", "RO", "RJ", "RN", "RS", "SC", "SP", "SE", "TEC", "TO"];
 
         for (var n = 0; n < lista_estados.length; n++) {
             var option = document.createElement("option");

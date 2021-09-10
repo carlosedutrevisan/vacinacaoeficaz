@@ -166,8 +166,7 @@ nav>ul>li {
 .sistemainfo {
     height: 50vh;
     width: 100%;
-    background: linear-gradient(-54deg, #acacac, #f1f1f1, #acacac) no-repeat;
-    background-size: 300% 300%;
+    background: linear-gradient(-90deg, #acacac, #f1f1f1, #acacac) no-repeat;
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
@@ -185,6 +184,7 @@ nav>ul>li {
     width: 28%;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgb(114, 114, 114);
+    position: relative;
 }
 
 #info1 {
@@ -199,13 +199,35 @@ nav>ul>li {
     background-color: #3971a7;
 }
 
+.titulosistemainfo{
+    margin:none;
+    color:#3f3f3f;
+}
+.paragrafosistemainfo{
+    position: absolute;
+    margin: 10px;
+    bottom: 5px;
+    color:#1b1b1b;
+}
+
+.controlbox {
+    height: 45px;
+    width: 93px;
+    background-color: rgb(88, 88, 88);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 25px #c2c2c2;
+}
+
 .adicionador {
     height: 40px;
     width: 40px;
     border-radius: 100%;
     border: none;
     background: rgb(255, 255, 255);
-    box-shadow: 0 10px 25px rgb(197, 197, 197);
+    box-shadow: 0 10px 25px #6b6b6b;
     color: rgb(88, 88, 88);
     cursor: pointer;
 }
@@ -216,7 +238,7 @@ nav>ul>li {
     border-radius: 100%;
     border: none;
     background: rgb(255, 255, 255);
-    box-shadow: 0 10px 25px rgb(197, 197, 197);
+    box-shadow: 0 10px 25px #929292;
     color: rgb(88, 88, 88);
     cursor: pointer;
 }
@@ -275,6 +297,8 @@ nav>ul>li {
     float: left;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .direitinha::-webkit-scrollbar {
@@ -300,13 +324,12 @@ nav>ul>li {
     transition: 0.3s;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
+    margin: auto;
     padding: 20px;
-    margin-left: 12px;
-    margin-bottom: 8px;
-    margin-top: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
     justify-content: center;
-    border-left: 12px;
     outline: none;
     border: none;
     font-family: "Sora";
