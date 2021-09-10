@@ -241,7 +241,7 @@ function fazerCard(origem, destino) {
     cartaDaVez.style = "width: 90%;"; // style do card
     cartaDaVez.id = "cardDestinos" + iDosMarkers;
     var origemStrign =
-        '<p style = "font-size: 18px;">' +
+        '<p style = "font-size: 18px; font-family: "Sora"">' +
         verLugar(origem) +
         " até " +
         verLugar(destino) +
@@ -257,7 +257,7 @@ function fazerCard(origem, destino) {
 }
 
 function fazerMarkers(destinoCoords, destinoNome, distancia) {
-    let markerString = '<p>Até aqui foram ' + distancia + ' quilometros.</p>';
+    let markerString = '<p style="font-family: Sora">Até aqui foram <strong>' + distancia + ' quilômetros</strong>.</p>';
     ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords, {
         icon: iconeAzul
     }).addTo(map).bindPopup(markerString);
@@ -456,9 +456,9 @@ function adicionar() {
     }
 }
 
-function remover(){
-    if(i>1){
-        document.getElementById("sel"+(i-1)).remove();
-       i--; 
+function remover() {
+    if (i > 1) {
+        document.getElementById("sel" + (i - 1)).remove();
+        i--;
     }
 }

@@ -30,7 +30,7 @@ a {
     animation: surgirtexto 1s 1s forwards;
 }
 
-.titlename1{
+.titlename1 {
     margin-left: 2vw;
 }
 
@@ -163,54 +163,43 @@ nav>ul>li {
     margin-right: 16px;
 }
 
-.sistemainfo{
+.sistemainfo {
     height: 50vh;
     width: 100%;
-    animation: degrade 15s ease alternate infinite;
     background: linear-gradient(-54deg, #acacac, #f1f1f1, #acacac) no-repeat;
     background-size: 300% 300%;
     display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
-.infocards-box{
+.infocards-box {
     height: 45vh;
     width: 70%;
     display: inline-flex;
     justify-content: space-around;
 }
 
-.infocards{
+.infocards {
     height: 45vh;
     width: 28%;
     border-radius: 0;
+    box-shadow: 0 10px 25px rgb(114, 114, 114);
 }
 
-#info1{
+#info1 {
     background-color: #67d44b;
 }
-#info2{
+
+#info2 {
     background-color: #4aa18c;
 }
-#info3{
+
+#info3 {
     background-color: #3971a7;
 }
 
-.adicionador{
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    border: none;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 10px 25px rgb(197, 197, 197);
-    color: rgb(88, 88, 88);
-    cursor: pointer;
-
-}
-
-.removedor{
+.adicionador {
     height: 40px;
     width: 40px;
     border-radius: 100%;
@@ -221,7 +210,18 @@ nav>ul>li {
     cursor: pointer;
 }
 
-.seletores{
+.removedor {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: none;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 10px 25px rgb(197, 197, 197);
+    color: rgb(88, 88, 88);
+    cursor: pointer;
+}
+
+.seletores {
     height: 40px;
     width: 100px;
     padding: 0 1em;
@@ -232,7 +232,6 @@ nav>ul>li {
     font-family: 'Noto Sans JP', sans-serif;
     cursor: pointer;
     border: none;
-
 }
 
 .container2 {
@@ -288,6 +287,7 @@ nav>ul>li {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     padding: 32px;
+    margin: auto;
     margin-top: 48px;
     margin-bottom: 36px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -335,8 +335,6 @@ nav>ul>li {
     -o-transform: scale(1.04, 1.04);
     transform: scale(1.04, 1.04);
 }
-
-
 
 .bigDiv {
     max-width: 1200px;
@@ -490,8 +488,6 @@ nav>ul>li {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-
 
 @keyframes revelation {
     0% {
