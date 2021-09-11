@@ -516,11 +516,19 @@ nav>ul>li {
     width: 100%;
     background-color: rgb(190, 145, 145);
     position: relative;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.valorant {
+    width: 100%;
+    background-color: rgb(190, 145, 145);
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -532,6 +540,23 @@ nav>ul>li {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.proletariado {
+    display: flex;
+    flex-direction: column;
+}
+
+.proletariado > h2 {
+    margin: auto;
+    margin-top: 8px;
+}
+
+.proletariado > img {
+    max-width: 200px;
+    width: 100%;
+    margin: auto;
+    margin-top: 8px;
 }
 
 @keyframes revelation {
