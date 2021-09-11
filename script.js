@@ -170,7 +170,7 @@ var iconePreto = new L.Icon({
 let techMarker = L.marker(TEC, {
     icon: iconePreto
 }).addTo(map);
-techMarker.bindPopup("<h3>Technópolis</h3>").openPopup();
+techMarker.bindPopup("<h2>Technópolis</h2>").openPopup();
 
 // Adiciona o Marker para as cidades
 var iconeAzul = new L.Icon({
@@ -242,14 +242,15 @@ function fazerCard(origem, destino) {
     cartaDaVez.style = "width: 90%;"; // style do card
     cartaDaVez.id = "cardDestinos" + iDosMarkers;
     var origemStrign =
-        '<p style = "font-size: 18px; font-family: "Sora"">' +
+        '<p style = "font-size: 18px; font-family: "Sora"">De ' +
         verLugar(origem) +
         " até " +
         verLugar(destino) +
-        "<br /></p>" +
-        '<p style = "font-size: 18px;">A distância entre esse dois pontos é de ' +
+        "<br /> são " +
         distanciaDosDoisPontos.toFixed(0) +
-        " quilômetros.</p>"; // Testinho do card
+        " quilômetros.</p>" +
+        '<p style = "font-size: 18px;">O custo do frete rodoviário até aqui é de <strong>x reais</strong> e o aeroviário é de <strong>y reais</strong>.</p>';
+    // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
     divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
     distanciaTotal += parseInt(distanciaDosDoisPontos.toFixed(0));
@@ -258,7 +259,18 @@ function fazerCard(origem, destino) {
 }
 
 function fazerMarkers(destinoCoords, destinoNome, distancia) {
-    let markerString = '<p style="font-family: Sora">Até aqui foram <strong>' + distancia + ' quilômetros</strong>.</p>';
+    let markerString = '<center><h2 style="infoMarkers">' + destinoNome + '</h2>' +
+        '<p style="infoMarkers">Até aqui são <strong>' +
+        distancia +
+        ' quilômetros</strong>.<br>' +
+        'Custo do frete até esse destino por cada modal:<br>' +
+        '• Rodoviário: <strong>' +
+        "x" +
+        ' reais</strong>.<br>' +
+        '• Aeroviário: <strong>' +
+        "x" +
+        ' reais</strong>.</p></center>';
+
     ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords, {
         icon: iconeAzul
     }).addTo(map).bindPopup(markerString);
@@ -446,7 +458,7 @@ function adicionar() {
         newsel.setAttribute('id', identidade);
         newsel.setAttribute('class', 'seletores');
 
-        var lista_estados = ["-","AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RR", "RO", "RJ", "RN", "RS", "SC", "SP", "SE", "TEC", "TO"];
+        var lista_estados = ["-", "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RR", "RO", "RJ", "RN", "RS", "SC", "SP", "SE", "TEC", "TO"];
 
         for (var n = 0; n < lista_estados.length; n++) {
             var option = document.createElement("option");

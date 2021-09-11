@@ -157,6 +157,7 @@ nav>ul>li {
 
 .paragrafocoronainfo {
     font-size: clamp(0.7rem, 1vw, 1rem);
+    text-indent: 40px;
 }
 
 .titulocoronainfo,
@@ -205,11 +206,10 @@ nav>ul>li {
     background-color: #3971a7;
 }
 
-.titulosistemainfo{
-    color:#3f3f3f;
+.titulosistemainfo {
+    color: #3f3f3f;
     margin: auto;
     font-size: clamp(1em, 0.3em + 3vw, 2.5em) !important;
-
 }
 
 .material-new {
@@ -224,18 +224,17 @@ nav>ul>li {
     flex-direction: column;
 }
 
-.paragrafosistemainfo{
+.paragrafosistemainfo {
     margin: 10px;
     bottom: 5px;
-    color:#1b1b1b;
+    color: #1b1b1b;
 }
 
-
 .controlbox {
-    height: 45px;
+    height: 46px;
     width: 93px;
-    background-color: rgb(88, 88, 88);
-    border-radius: 20px;
+    background-color: rgb(91, 91, 91);
+    border-radius: 23px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -248,7 +247,6 @@ nav>ul>li {
     border-radius: 100%;
     border: none;
     background: rgb(255, 255, 255);
-    box-shadow: 0 10px 25px #6b6b6b;
     color: rgb(88, 88, 88);
     cursor: pointer;
 }
@@ -259,7 +257,6 @@ nav>ul>li {
     border-radius: 100%;
     border: none;
     background: rgb(255, 255, 255);
-    box-shadow: 0 10px 25px #929292;
     color: rgb(88, 88, 88);
     cursor: pointer;
 }
@@ -271,8 +268,8 @@ nav>ul>li {
     box-shadow: 0 10px 25px rgb(197, 197, 197);
     border-radius: 3px;
     background: rgb(255, 255, 255);
-    color: rgb(88, 88, 88);
-    font-family: 'Noto Sans JP', sans-serif;
+    color: rgb(41, 41, 41);
+    font-family: "Noto Sans JP", sans-serif;
     cursor: pointer;
     border: none;
 }
@@ -513,18 +510,37 @@ nav>ul>li {
 
 .equipe {
     width: 100%;
-    background-color: rgb(190, 145, 145);
+    background-color: rgb(6, 35, 63);
     position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 32px;
+    color: white;
+}
+
+.cardEquipe {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 32px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    max-width: 350px;
+    width: 90%;
+    height: 350px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
 }
 
 .valorant {
     width: 100%;
-    background-color: rgb(190, 145, 145);
+    background-color: rgb(6, 35, 63);
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -547,12 +563,12 @@ nav>ul>li {
     flex-direction: column;
 }
 
-.proletariado > h2 {
+.proletariado>h2 {
     margin: auto;
     margin-top: 8px;
 }
 
-.proletariado > img {
+.proletariado>img {
     max-width: 200px;
     width: 100%;
     margin: auto;
@@ -564,7 +580,7 @@ nav>ul>li {
     flex-direction: column;
 }
 
-.content > h1 {
+.content>h1 {
     margin: auto;
 }
 
@@ -573,7 +589,7 @@ nav>ul>li {
     flex-direction: column;
 }
 
-.calculo > h2 {
+.calculo>h2 {
     margin: auto;
     color: rgb(78, 78, 78);
 }
@@ -591,7 +607,7 @@ nav>ul>li {
     flex-wrap: wrap-reverse;
 }
 
-.gps > img {
+.gps>img {
     max-width: 500px;
     width: 100%;
     margin-left: 16px;
@@ -618,7 +634,7 @@ footer {
     text-align: center;
 }
 
-.insideFooter > p {
+.insideFooter>p {
     margin-left: 16px;
     text-align: center;
 }
@@ -636,4 +652,10 @@ footer {
     to {
         opacity: 1;
     }
+}
+
+.infoMarkers {
+    font-family: "Sora";
+    text-align: center;
+    padding: auto;
 }
