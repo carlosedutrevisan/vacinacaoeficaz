@@ -520,6 +520,7 @@ nav>ul>li {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 64px;
 }
 
 .valorant {
@@ -557,6 +558,24 @@ nav>ul>li {
     width: 100%;
     margin: auto;
     margin-top: 8px;
+}
+
+footer {
+    background-color: rgb(172, 44, 44);
+    width: 100%;
+    height: 8vh;
+    display: inline-flex;
+}
+
+.insideFooter {
+    display: inline-flex;
+    margin: auto;
+    text-align: center;
+}
+
+.insideFooter > p {
+    margin-left: 16px;
+    text-align: center;
 }
 
 @keyframes revelation {
