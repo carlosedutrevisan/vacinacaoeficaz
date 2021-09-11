@@ -239,6 +239,9 @@ function fazerCard(origem, destino) {
     const divDasCards = document.getElementById("rotasLista"); // Pega esse div vazio, de baixo do mapa
     var cartaDaVez = document.createElement("button"); // Cria um novo card para colocar as coisas
     var distanciaDosDoisPontos = origem.distanceTo(destino) / 1000; // Calcula a distancia, só para colocar no card
+    distanciaTotal += parseInt(distanciaDosDoisPontos.toFixed(0));
+    let custoRodo = 121.90 + (distanciaTotal.toFixed(0) * 0.153 * 1.5);
+    custoRodoTotal += custoRodo;
     cartaDaVez.className = "cardDistan"; // Coloca o card como classe card, que tá no css
     cartaDaVez.style = "width: 90%;"; // style do card
     cartaDaVez.id = "cardDestinos" + iDosMarkers;
@@ -254,9 +257,6 @@ function fazerCard(origem, destino) {
     // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
     divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
-    distanciaTotal += parseInt(distanciaDosDoisPontos.toFixed(0));
-    let custoRodo = 121.90 + (distanciaTotal.toFixed(0) * 0.153 * 1.5);
-    // console.log(distanciaTotal)
     fazerMarkers(destino, verLugar(destino), distanciaTotal, custoRodo);
 }
 
@@ -272,7 +272,6 @@ function fazerMarkers(destinoCoords, destinoNome, distancia, custoRodo) {
         '• Aeroviário: <strong>' +
         "x" +
         ' reais</strong>.</p></center>';
-
     ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords, {
         icon: iconeAzul
     }).addTo(map).bindPopup(markerString);
@@ -289,7 +288,13 @@ function fazerCardFinal() {
     cartaDaVez.className = "cardFinalDiv"; // Coloca o card como classe card, que tá no css
     cartaDaVez.style = "cardFinalDiv"; // style do card
     var origemStrign =
-        '<p style = "font-size: 18px;">A distância total é de <strong>' + distanciaTotal + ' quilômetros</strong>.</p>'; // Testinho do card
+        '<p style = "font-size: 18px;">A distância total é de <strong>' +
+        distanciaTotal +
+        ' quilômetros</strong>.<br>' +
+        'O custo do frete passando por todos os destinos por cada modal é de:<br> • Rodoviário: <strong>' +
+        custoRodoTotal.toFixed(2) +
+        ' reais</strong>.</p>';
+    // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
     divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
     for (let i = 0; i < iDosMarkers; i++) {
