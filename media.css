@@ -2,33 +2,38 @@
     .titlename1 {
         display: none;
     }
-
     .titlename2 {
         display: flex;
     }
-
     #imgbrasil {
         display: none;
     }
-
-    nav > ul > li {
-        margin-left: 24px ;
+    nav>ul>li {
+        margin-left: 24px;
     }
-
     .coronainfo {
         flex-direction: column;
     }
-
     .textosmenu {
         top: 0;
     }
-
-    .titulocoronainfo, .paragrafocoronainfo, .dip {
+    .titulocoronainfo,
+    .paragrafocoronainfo,
+    .dip {
         margin-left: 5vw;
         margin-right: 5vw;
     }
-
     #imgbrasil {
         right: auto;
+    }
+    .cardMapa {
+        display: flex;
+        flex-direction: column;
+    }
+    .mapStyle {
+        width: 100%;
+    }
+    .direitinha {
+        width: 100%;
     }
 }

@@ -253,7 +253,9 @@ function fazerCard(origem, destino) {
         "<br /> são " +
         distanciaDosDoisPontos.toFixed(0) +
         " quilômetros.</p>" +
-        '<p style = "font-size: 18px;">O custo do frete rodoviário até aqui é de <strong>x reais</strong> e o aeroviário é de <strong>y reais</strong>.</p>';
+        '<p style = "font-size: 18px;">O custo do frete rodoviário até aqui é de <strong>' +
+        custoRodo.toFixed(2) +
+        ' reais</strong> e o aeroviário é de <strong>y reais</strong>.</p>';
     // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
     divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
@@ -265,7 +267,7 @@ function fazerMarkers(destinoCoords, destinoNome, distancia, custoRodo) {
         '<p style="infoMarkers">Até aqui são <strong>' +
         distancia +
         ' quilômetros</strong>.<br>' +
-        'Custo do frete até esse destino por cada modal:<br>' +
+        'Custo do frete da última cidade até esse destino por cada modal:<br>' +
         '• Rodoviário: <strong>' +
         custoRodo.toFixed(2) +
         ' reais</strong>.<br>' +
