@@ -487,3 +487,12 @@ function remover() {
         i--;
     }
 }
+
+document.getElementById('botaoanimado').addEventListener('click', () => {
+    var exp = document.getElementById('rotasLista');
+    var mapa = document.querySelector('.mapStyle');
+    mapa.style.width = '60%'
+    exp.style.display = 'flex';
+  }, {
+    once: true,
+  });
