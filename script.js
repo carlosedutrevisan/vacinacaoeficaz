@@ -147,14 +147,16 @@ function pegarCoords(estados) {
 
 // Criação do mapa setando para o Brasil em um zoom que pega tudo
 
-var map = L.map("map").setView([-15, -55], 5);
+var map = L.map("map").setView([-15, -45], 4);
 let layerDoMapa = L.tileLayer(
     "https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=hKsUwUx2YBOu2Scruilx", {
         tileSize: 512,
+        center: [-15, -55],
         zoomOffset: -1,
         minZoom: 1,
         attribution: '\u003ca href="https://www.maptiler.com/copyright/" target="_blank"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href="https://www.openstreetmap.org/copyright" target="_blank"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e',
         crossOrigin: true,
+        trackResize: true
     }
 ).addTo(map);
 
@@ -489,10 +491,14 @@ function remover() {
 }
 
 document.getElementById('botaoanimado').addEventListener('click', () => {
+    console.log("antes ",
+        map.getSize());
     var exp = document.getElementById('rotasLista');
     var mapa = document.querySelector('.mapStyle');
     mapa.style.width = '60%'
     exp.style.display = 'flex';
-  }, {
+    console.log(map.getSize());
+    L.map.viewreset();
+}, {
     once: true,
-  });
+});
