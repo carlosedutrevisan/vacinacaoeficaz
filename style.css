@@ -520,7 +520,7 @@ nav>ul>li {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
 }
 
 .valorant {
@@ -558,6 +558,44 @@ nav>ul>li {
     width: 100%;
     margin: auto;
     margin-top: 8px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content > h1 {
+    margin: auto;
+}
+
+.calculo {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculo > h2 {
+    margin: auto;
+    color: rgb(78, 78, 78);
+}
+
+.gps {
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.gps > img {
+    max-width: 500px;
+    width: 100%;
+}
+
+.ttlimite {
+    max-width: 700px;
+    width: 100%;
 }
 
 footer {
