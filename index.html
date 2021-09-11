@@ -56,9 +56,11 @@
                             </a>
                         </li>
                         <li>
-                            <p>
-                                Equipe
-                            </p>
+                            <a href="#EquipeDiv">
+                                <p>
+                                    Equipe
+                                </p>
+                            </a>
                         </li>
                     </ul>
                 </nav>
@@ -145,19 +147,19 @@
                 </div>
             </div>
             <div class="outContainer">
+                <div class="controlbox">
+                    <button class="adicionador" onclick="adicionar()">
+                        <span class="material-icons">
+                            add
+                        </span>
+                    </button>
+                    <button class="removedor" onclick="remover()">
+                        <span class="material-icons">
+                            backspace
+                        </span>
+                    </button>
+                </div>
                 <div class="insideContainer" id="insideContainer">
-                    <div class="controlbox">
-                        <button class="adicionador" onclick="adicionar()">
-                            <span class="material-icons">
-                                add
-                            </span>
-                        </button>
-                        <button class="removedor" onclick="remover()">
-                            <span class="material-icons">
-                                backspace
-                            </span>
-                        </button>
-                    </div>
                     <select name="sel1" id="sel0" class="seletores">
                         <option value="">-</option>
                         <option value="AC">AC</option>
@@ -207,7 +209,7 @@
     </div>
 
     <div class="equipe">
-        <h1 style="padding-top: 12px;">
+        <h1 style="padding-top: 12px;" id="EquipeDiv">
             Equipe
         </h1>
         <div class="valorant">
@@ -266,7 +268,6 @@
             <h2>
                 Como é feito o cálculo dos custos?
             </h2>
-
             <div class="gps">
                 <img src="https://image.flaticon.com/icons/png/512/532/532859.png" alt="">
                 <div class="ttlimite">
@@ -274,11 +275,11 @@
                         BLABLABLABLA CAMINHÃO
                     </h2>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus
-                        sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-                        quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum
-                        dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus
-                        necessitatibus sit ipsam dignissimos.
+                        <strong>Na média geral do país, as transportadoras pagam R$ 121,90 por tonelada e R$ 0,153 por tonelada por quilômetro<br></strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus
+                        necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem,
+                        ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam
+                        temporibus necessitatibus sit ipsam dignissimos.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia quam ipsa voluptate numquam temporibus necessitatibus sit ipsam dignissimos.
                     </p>
                 </div>
 
@@ -319,12 +320,15 @@
     </div>
     <footer>
         <div class="insideFooter">
-            <p>
-                &copf; GRUPÃO | "Tudo nosso, nada deles." |
-            </p>
-            <p>
-                <a href="https://www.maptiler.com/">Map API</a>
-            </p>
+            <div style="display: block;">
+                <p>
+                    a GRUPÃO production | "Tudo nosso, nada deles."<br> Vacinação Eficaz © 2021<br>
+                </p>
+                <p style="font-size: small;">
+                    <a href="https://www.maptiler.com/">Maptiler</a> |
+                    <a href="https://leafletjs.com/">Leaflet API</a>
+                </p>
+            </div>
         </div>
     </footer>
     <script src="script.js"></script>
