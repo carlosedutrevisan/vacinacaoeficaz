@@ -7,6 +7,10 @@
         display: flex;
     }
 
+    #imgbrasil {
+        display: none;
+    }
+
     nav > ul > li {
         margin-left: 24px ;
     }
@@ -17,7 +21,6 @@
 
     .textosmenu {
         top: 0;
-        margin-top: 40px;
     }
 
     .titulocoronainfo, .paragrafocoronainfo, .dip {

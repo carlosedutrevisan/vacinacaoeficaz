@@ -94,7 +94,6 @@ nav>ul>li {
     display: flex;
     flex-direction: column;
     max-width: 900px;
-    margin-inline: 5vw;
     z-index: 2;
     margin: auto 5vw 40vh 5vw;
 }
@@ -588,14 +587,22 @@ nav>ul>li {
     margin-bottom: 32px;
 }
 
+.gps2 {
+    flex-wrap: wrap-reverse;
+}
+
 .gps > img {
     max-width: 500px;
     width: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .ttlimite {
     max-width: 700px;
     width: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 footer {
