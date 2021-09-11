@@ -136,6 +136,8 @@ nav>ul>li {
     align-items: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-bottom: 24px;
+    margin-top: 18px;
 }
 
 #imgcorona {
@@ -165,6 +167,17 @@ nav>ul>li {
 .dip {
     margin-right: 16px;
     margin-right: 16px;
+}
+
+.sistemainfoHeader {
+    width: 100%;
+    background-color: rgb(0, 43, 6);
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
 }
 
 .sistemainfo {
@@ -202,6 +215,7 @@ nav>ul>li {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     justify-content: center;
+    margin-top: 8px;
 }
 
 #info1 {
@@ -220,7 +234,7 @@ nav>ul>li {
 }
 
 .titulosistemainfo {
-    color: #3f3f3f;
+    color: #000000;
     margin: auto;
     font-size: clamp(1em, 0.3em + 3vw, 2.5em) !important;
 }
