@@ -242,10 +242,10 @@ function fazerCard(origem, destino) {
     var cartaDaVez = document.createElement("button"); // Cria um novo card para colocar as coisas
     var distanciaDosDoisPontos = origem.distanceTo(destino) / 1000; // Calcula a distancia, só para colocar no card
     distanciaTotal += parseInt(distanciaDosDoisPontos.toFixed(0));
-    const rodKm = 80;
-    const aerKm = 950;
-    var tempoRod = (distanciaTotal/rodKm) * 34.16; // distancia em horas multiplicada pelo custo em horas
-    var tempoAer = (distanciaTotal / aerKm) * 34.16;
+    const rodKm = 80; // velocidade media camihão
+    const aerKm = 950; // velocidade media avião
+    var tempoRod = (distanciaTotal / rodKm) * 197.28; // distancia em horas multiplicada pelo custo em horas
+    var tempoAer = (distanciaTotal / aerKm) * 12309.45;
     let custoRodo = 121.90 + (distanciaTotal.toFixed(0) * 0.153 * 1.25) + tempoRod;
     let custoAero = distanciaTotal.toFixed(0) * 5.83 + tempoAer;
     custoRodoTotal += custoRodo;
