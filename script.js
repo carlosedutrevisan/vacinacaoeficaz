@@ -242,8 +242,10 @@ function fazerCard(origem, destino) {
     var cartaDaVez = document.createElement("button"); // Cria um novo card para colocar as coisas
     var distanciaDosDoisPontos = origem.distanceTo(destino) / 1000; // Calcula a distancia, só para colocar no card
     distanciaTotal += parseInt(distanciaDosDoisPontos.toFixed(0));
-    let custoRodo = 121.90 + (distanciaTotal.toFixed(0) * 0.153 * 1.5);
+    let custoRodo = 121.90 + (distanciaTotal.toFixed(0) * 0.153 * 1.25);
+    let custoAero = distanciaTotal.toFixed(0) * 5.83;
     custoRodoTotal += custoRodo;
+    custoAeroTotal += custoAero;
     cartaDaVez.className = "cardDistan"; // Coloca o card como classe card, que tá no css
     cartaDaVez.style = "width: 90%;"; // style do card
     cartaDaVez.id = "cardDestinos" + iDosMarkers;
@@ -257,14 +259,14 @@ function fazerCard(origem, destino) {
         " quilômetros.</p>" +
         '<p style = "font-size: 18px;">O custo do frete rodoviário até aqui é de <strong>' +
         custoRodo.toFixed(2) +
-        ' reais</strong> e o aeroviário é de <strong>y reais</strong>.</p>';
+        ' reais</strong> e o aeroviário é de <strong>' + custoAero.toFixed(2) + ' reais</strong>.</p>';
     // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
     divDasCards.append(cartaDaVez); // Coloca o card na nossa div vazia
-    fazerMarkers(destino, verLugar(destino), distanciaTotal, custoRodo);
+    fazerMarkers(destino, verLugar(destino), distanciaTotal, custoRodo, custoAero);
 }
 
-function fazerMarkers(destinoCoords, destinoNome, distancia, custoRodo) {
+function fazerMarkers(destinoCoords, destinoNome, distancia, custoRodo, custoAero) {
     let markerString = '<center><h2 style="infoMarkers">' + destinoNome + '</h2>' +
         '<p style="infoMarkers">Até aqui são <strong>' +
         distancia +
@@ -274,7 +276,7 @@ function fazerMarkers(destinoCoords, destinoNome, distancia, custoRodo) {
         custoRodo.toFixed(2) +
         ' reais</strong>.<br>' +
         '• Aeroviário: <strong>' +
-        "x" +
+        custoAero.toFixed(2) +
         ' reais</strong>.</p></center>';
     ArrayDosMarkers[iDosMarkers] = L.marker(destinoCoords, {
         icon: iconeAzul
@@ -284,7 +286,8 @@ function fazerMarkers(destinoCoords, destinoNome, distancia, custoRodo) {
 }
 
 let distanciaTotal = 0,
-    custoRodoTotal = 0;
+    custoRodoTotal = 0,
+    custoAeroTotal = 0;
 
 function fazerCardFinal() {
     const divDasCards = document.getElementById("oCardDoMapa"); // Pega esse div vazio, de baixo do mapa
@@ -297,6 +300,8 @@ function fazerCardFinal() {
         ' quilômetros</strong>.<br>' +
         'O custo do frete passando por todos os destinos por cada modal é de:<br> • Rodoviário: <strong>' +
         custoRodoTotal.toFixed(2) +
+        ' reais</strong><br> • Rodoviário: <strong>' +
+        custoAeroTotal.toFixed(2) +
         ' reais</strong>.</p>';
     // Testinho do card
     cartaDaVez.innerHTML = origemStrign; // Coloca esse testinho que acabamos de fazer no nosso card
