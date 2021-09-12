@@ -625,6 +625,7 @@ nav>ul>li {
 .calculo {
     display: flex;
     flex-direction: column;
+    margin-bottom: 64px;
 }
 
 .calculo>h2 {
