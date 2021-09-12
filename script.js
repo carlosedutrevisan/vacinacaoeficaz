@@ -300,7 +300,7 @@ function fazerCardFinal() {
         ' quilômetros</strong>.<br>' +
         'O custo do frete passando por todos os destinos por cada modal é de:<br> • Rodoviário: <strong>' +
         custoRodoTotal.toFixed(2) +
-        ' reais</strong><br> • Rodoviário: <strong>' +
+        ' reais</strong><br> • Aeroviário: <strong>' +
         custoAeroTotal.toFixed(2) +
         ' reais</strong>.</p>';
     // Testinho do card
